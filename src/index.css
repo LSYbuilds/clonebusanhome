@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* KOHI배움 */
+@font-face {
+  font-family: "KohiLearn";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+/* G마켓산스 */
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+/* 노토산스 */
+@font-face {
+  font-family: "Noto Sans KR", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+html {
+  font-size: 16px;
+  height: auto;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
