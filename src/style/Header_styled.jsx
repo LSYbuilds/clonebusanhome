@@ -76,7 +76,9 @@ export const HeaderWrap = styled.header`
             text-align: center;
             text-align: center;
             font-size: 21px;
-
+            a {
+              color: #fff;
+            }
             &::after {
               content: "";
               position: absolute;
@@ -91,8 +93,8 @@ export const HeaderWrap = styled.header`
         }
         .search_box {
           display: flex;
-          gap: 5%;
-          justify-content: center;
+          gap: 25%;
+          justify-content: flex-end;
           align-items: center;
           width: 14%;
           .search {
