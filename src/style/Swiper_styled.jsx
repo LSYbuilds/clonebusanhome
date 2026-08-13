@@ -18,7 +18,6 @@ export const StyledSwiper = styled(Swiper)`
       width: 100%;
       overflow: hidden;
       .imgbox {
-        position: relative;
         width: 100%;
         height: 100%;
         img {
@@ -32,7 +31,8 @@ export const StyledSwiper = styled(Swiper)`
         .img_info {
           position: absolute;
           bottom: 50px;
-          right: -88.5%;
+          right: 50px;
+          width: auto;
           font-size: 26px;
           font-weight: 500;
           text-shadow: 3px 2px 10px #000;

@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { HeaderWrap } from "../style/Header_styled";
 import Icon from "./SvgComponents";
+import { li, ul } from "framer-motion/client";
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [hover, setHover] = useState(false);
+  console.log("마우스 상태확인", hover);
+  useEffect(() => {
+    const handlescroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handlescroll);
+    return () => {
+      window.removeEventListener("scroll", handlescroll);
+    };
+  }, []);
   const headerdata = [
     {
       id: "1",
@@ -82,7 +96,7 @@ const Header = () => {
     },
   ];
   return (
-    <HeaderWrap>
+    <HeaderWrap scrolled={scrolled}>
       <div className="header_i">
         <div className="logo_box">
           <h1 className="logo">
@@ -150,15 +164,55 @@ const Header = () => {
             </ul>
           </div>
           <div className="gnb_bar">
-            <nav className="gnb">
+            <motion.nav
+              className="gnb"
+              onHoverStart={() => {
+                (setHover(true), setScrolled(true));
+              }}
+              onHoverEnd={() => {
+                (setHover(false), setScrolled(false));
+              }}
+            >
               <ul className="gnb_list">
                 {headerdata.map((item) => (
                   <li key={item.id}>
                     <Link to="#">{item.title}</Link>
+                    <AnimatePresence>
+                      {hover && (
+                        <motion.ul
+                          className="lnb_list"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.5 }}
+                        >
+                          {item.list.map((list) => (
+                            <li key={list.id}>{list.subtitle}</li>
+                          ))}
+                        </motion.ul>
+                      )}
+                    </AnimatePresence>
                   </li>
                 ))}
               </ul>
-            </nav>
+              {/* <motion.div
+                className="lnb_area"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="lnb_i">
+                  {headerdata.map((item) => (
+                    <ul className="lnb_list" key={item.id}>
+                      {item.list.map((list) => (
+                        <li key={list.id}>{list.subtitle}</li>
+                      ))}
+                    </ul>
+                  ))}
+                </div>
+              </motion.div> */}
+            </motion.nav>
             <div className="search_box">
               <div className="search">
                 <Icon.search />

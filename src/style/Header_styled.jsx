@@ -1,12 +1,14 @@
 import styled from "@emotion/styled";
+import busanLogo from "/src/assets/svg/busan_logo.svg";
+import logoSlogan from "/src/assets/svg/logo_slogan.svg";
 
 export const HeaderWrap = styled.header`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 110px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: ${(props) => (props.scrolled ? "#fff" : "none")};
   z-index: 12;
   .header_i {
     display: flex;
@@ -17,7 +19,7 @@ export const HeaderWrap = styled.header`
     height: 100%;
     .logo_box {
       width: 170px;
-      height: 100%;
+      height: 110px;
       .logo {
         display: flex;
         justify-content: center;
@@ -29,7 +31,8 @@ export const HeaderWrap = styled.header`
           display: block;
           width: 170px;
           height: 100%;
-          background-image: url("/src/assets/svg/logo_slogan.svg");
+          background-image: ${(props) =>
+            `url(${props.scrolled ? busanLogo : logoSlogan})`};
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center bottom 0;
@@ -51,7 +54,7 @@ export const HeaderWrap = styled.header`
             padding: 0 10px;
             align-content: center;
             a {
-              color: #fff;
+              color: ${(props) => (props.scrolled ? "#000 " : "#fff")};
               font-size: 15px;
               font-weight: 400;
             }
@@ -61,8 +64,9 @@ export const HeaderWrap = styled.header`
       .gnb_bar {
         display: flex;
         justify-content: space-between;
-        height: 65px;
+        height: auto;
         .gnb {
+          position: relative;
           width: 1170px;
           align-content: center;
         }
@@ -70,14 +74,21 @@ export const HeaderWrap = styled.header`
           display: flex;
           justify-content: space-between;
           align-items: stretch;
+          height: 100%;
+          overflow: hidden;
           li {
-            position: relative;
             flex: 0 0 20%;
-            text-align: center;
             text-align: center;
             font-size: 21px;
             a {
-              color: #fff;
+              display: block;
+              height: 65px;
+              align-content: center;
+              color: ${(props) => (props.scrolled ? "#000" : "#fff ")};
+            }
+            .lnb_list {
+              display: flex;
+              flex-direction: column;
             }
             &::after {
               content: "";
@@ -97,6 +108,7 @@ export const HeaderWrap = styled.header`
           justify-content: flex-end;
           align-items: center;
           width: 14%;
+          height: 65px;
           .search {
             align-content: center;
             width: 30px;
@@ -115,7 +127,7 @@ export const HeaderWrap = styled.header`
               display: block;
               width: 100%;
               height: 2px;
-              background: #ffffff;
+              background: ${(props) => (props.scrolled ? "#000" : "#fff")};
               &:nth-child(2) {
                 width: 80%;
               }
@@ -125,16 +137,4 @@ export const HeaderWrap = styled.header`
       }
     }
   }
-  /* .lnb_area {
-    width: 100%;
-    height: 300px;
-    background-color: red;
-    .lnb_i {
-      margin: 0 auto;
-      max-width: 1600px;
-      width: 100%;
-      height: 300px;
-      background-color: skyblue;
-    }
-  } */
 `;
