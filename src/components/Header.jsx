@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { HeaderWrap } from "../style/Header_styled";
 import Icon from "./SvgComponents";
-import { li, ul } from "framer-motion/client";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [hover, setHover] = useState(false);
@@ -96,7 +95,7 @@ const Header = () => {
     },
   ];
   return (
-    <HeaderWrap scrolled={scrolled}>
+    <HeaderWrap scrolled={scrolled} hover={hover}>
       <div className="header_i">
         <div className="logo_box">
           <h1 className="logo">
@@ -167,13 +166,13 @@ const Header = () => {
             <motion.nav
               className="gnb"
               onHoverStart={() => {
-                (setHover(true), setScrolled(true));
+                setHover(true);
               }}
               onHoverEnd={() => {
-                (setHover(false), setScrolled(false));
+                setHover(false);
               }}
             >
-              <ul className="gnb_list">
+              {/* <ul className="gnb_list">
                 {headerdata.map((item) => (
                   <li key={item.id}>
                     <Link to="#">{item.title}</Link>
@@ -194,24 +193,14 @@ const Header = () => {
                     </AnimatePresence>
                   </li>
                 ))}
+              </ul> */}
+              <ul className="gnb_list">
+                {headerdata.map((item) => (
+                  <li key={item.id} className="gnb_item">
+                    <Link to="#">{item.title}</Link>
+                  </li>
+                ))}
               </ul>
-              {/* <motion.div
-                className="lnb_area"
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="lnb_i">
-                  {headerdata.map((item) => (
-                    <ul className="lnb_list" key={item.id}>
-                      {item.list.map((list) => (
-                        <li key={list.id}>{list.subtitle}</li>
-                      ))}
-                    </ul>
-                  ))}
-                </div>
-              </motion.div> */}
             </motion.nav>
             <div className="search_box">
               <div className="search">
@@ -226,11 +215,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* <div className="lnb_area">
-        <div className="lnb_i">
-          <div className="lnb_list"></div>
-        </div>
-      </div> */}
     </HeaderWrap>
   );
 };
