@@ -6,6 +6,7 @@ import Icon from "./SvgComponents";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [hover, setHover] = useState(false);
+  const [lang, setLang] = useState(false);
   console.log("마우스 상태확인", hover);
   useEffect(() => {
     const handlescroll = () => {
@@ -79,18 +80,18 @@ const Header = () => {
       title: "분야별정보",
       link: "보류",
       list: [
-        { id: "1", subtitle: "경제", svg: "대기" },
-        { id: "2", subtitle: "일자리·교육", svg: "대기" },
-        { id: "3", subtitle: "사회복지", svg: "대기" },
-        { id: "4", subtitle: "여성·가족", svg: "대기" },
-        { id: "5", subtitle: "보건·건강", svg: "대기" },
-        { id: "6", subtitle: "도시·건축", svg: "대기" },
-        { id: "7", subtitle: "안전", svg: "대기" },
-        { id: "8", subtitle: "공원녹지·환경", svg: "대기" },
-        { id: "9", subtitle: "교통·물류", svg: "대기" },
-        { id: "10", subtitle: "해양논수산", svg: "대기" },
-        { id: "11", subtitle: "행정", svg: "대기" },
-        { id: "12", subtitle: "문화체육관광", svg: "대기" },
+        { id: "1", subtitle: "경제", svg: Icon.lnbIco1 },
+        { id: "2", subtitle: "일자리·교육", svg: Icon.lnbIco2 },
+        { id: "3", subtitle: "사회복지", svg: Icon.lnbIco3 },
+        { id: "4", subtitle: "여성·가족", svg: Icon.lnbIco4 },
+        { id: "5", subtitle: "보건·건강", svg: Icon.lnbIco5 },
+        { id: "6", subtitle: "도시·건축", svg: Icon.lnbIco6 },
+        { id: "7", subtitle: "안전", svg: Icon.lnbIco7 },
+        { id: "8", subtitle: "공원녹지·환경", svg: Icon.lnbIco8 },
+        { id: "9", subtitle: "교통·물류", svg: Icon.lnbIco9 },
+        { id: "10", subtitle: "해양논수산", svg: Icon.lnbIco10 },
+        { id: "11", subtitle: "행정", svg: Icon.lnbIco11 },
+        { id: "12", subtitle: "문화체육관광", svg: Icon.lnbIco12 },
       ],
     },
   ];
@@ -141,24 +142,40 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#">kor</Link>
-                {/* <ul className="lang_change">
-                  <li>
-                    <Link to="#">English</Link>
-                  </li>
-                  <li>
-                    <Link to="#">日本語</Link>
-                  </li>
-                  <li>
-                    <Link to="#">简体中文</Link>
-                  </li>
-                  <li>
-                    <Link to="#">繁體中文</Link>
-                  </li>
-                  <li>
-                    <Link to="#">WorldWide</Link>
-                  </li>
-                </ul> */}
+                <Link to="#" onClick={() => setLang(!lang)}>
+                  <span>kor</span>
+                  <span>
+                    <Icon.downallow />
+                  </span>
+                </Link>
+                <AnimatePresence>
+                  {lang && (
+                    <motion.ul
+                      className="lang_change"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      style={{ overflow: "hidden" }}
+                    >
+                      <li>
+                        <Link to="#">English</Link>
+                      </li>
+                      <li>
+                        <Link to="#">日本語</Link>
+                      </li>
+                      <li>
+                        <Link to="#">简体中文</Link>
+                      </li>
+                      <li>
+                        <Link to="#">繁體中文</Link>
+                      </li>
+                      <li>
+                        <Link to="#">WorldWide</Link>
+                      </li>
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
               </li>
             </ul>
           </div>
@@ -172,28 +189,6 @@ const Header = () => {
                 setHover(false);
               }}
             >
-              {/* <ul className="gnb_list">
-                {headerdata.map((item) => (
-                  <li key={item.id}>
-                    <Link to="#">{item.title}</Link>
-                    <AnimatePresence>
-                      {hover && (
-                        <motion.ul
-                          className="lnb_list"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.5 }}
-                        >
-                          {item.list.map((list) => (
-                            <li key={list.id}>{list.subtitle}</li>
-                          ))}
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
-                  </li>
-                ))}
-              </ul> */}
               <ul className="gnb_list">
                 {headerdata.map((item) => (
                   <li key={item.id} className="gnb_item">
@@ -215,6 +210,50 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <AnimatePresence>
+        {hover && (
+          <motion.div
+            className="lnb_wrap"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{ overflow: "hidden" }}
+            onHoverStart={() => {
+              setHover(true);
+            }}
+            onHoverEnd={() => {
+              setHover(false);
+            }}
+          >
+            <div class="lnb_i">
+              <div class="lnb_list">
+                {headerdata.map((item) => (
+                  <ul key={item.id} className="lnb_item">
+                    {item.list.map((iitem) => {
+                      const SvgIcon = iitem.svg;
+                      return (
+                        <li key={iitem.id}>
+                          <Link to="#">
+                            {SvgIcon ? (
+                              <span className="icon">
+                                {SvgIcon && <SvgIcon />}
+                              </span>
+                            ) : (
+                              <span className="icon">-</span>
+                            )}
+                            <span>{iitem.subtitle}</span>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </HeaderWrap>
   );
 };

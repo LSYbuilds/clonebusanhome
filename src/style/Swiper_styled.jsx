@@ -42,7 +42,7 @@ export const StyledSwiper = styled(Swiper)`
   }
   .swiper-pagination {
     left: -41%;
-    bottom: 8%;
+    bottom: 6%;
     .swiper-pagination-bullet-active {
       width: 2%;
       border-radius: 100px;
