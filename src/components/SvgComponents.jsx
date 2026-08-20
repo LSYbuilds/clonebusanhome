@@ -1,6 +1,8 @@
 import Logo from "../assets/svg/logo_slogan.svg?react";
 import Down from "../assets/svg/arrow_down.svg?react";
 import Search from "../assets/svg/search.svg?react";
+import Calendar from "../assets/svg/icon/ico_calender.svg?react";
+import ArrowHalf from "../assets/svg/icon/ico_arrow_right_h.svg?react";
 import LnbIco1 from "../assets/svg/icon/lnb_ico1.svg?react";
 import LnbIco2 from "../assets/svg/icon/lnb_ico2.svg?react";
 import LnbIco3 from "../assets/svg/icon/lnb_ico3.svg?react";
@@ -18,6 +20,8 @@ const Icon = {
   logo: Logo,
   downallow: Down,
   search: Search,
+  arrowHalf: ArrowHalf,
+  calendar: Calendar,
   lnbIco1: LnbIco1,
   lnbIco2: LnbIco2,
   lnbIco3: LnbIco3,

@@ -1,13 +1,15 @@
 import React from "react";
-import { MainWrap } from "../style/MainPage_styled";
-import { StyledSwiper } from "../style/Swiper_styled";
+import { Link } from "react-router-dom";
+import { MainWrap, GuideSection } from "../style/MainPage_styled";
+import { StyledSwiper, ServiceSwiper } from "../style/Swiper_styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
-const Main = () => {
+import Icon from "../components/SvgComponents";
+const MainPage = () => {
   const slidedata = [
     {
       id: "1",
@@ -46,11 +48,24 @@ const Main = () => {
       src: "/video/main_beach_vod2.mp4",
     },
   ];
+  const IconSet = [
+    { id: "1", subtitle: "경제", svg: Icon.lnbIco1 },
+    { id: "2", subtitle: "일자리·노동·교육", svg: Icon.lnbIco2 },
+    { id: "3", subtitle: "사회복지", svg: Icon.lnbIco3 },
+    { id: "4", subtitle: "여성·가족", svg: Icon.lnbIco4 },
+    { id: "5", subtitle: "보건·건강", svg: Icon.lnbIco5 },
+    { id: "6", subtitle: "도시·건축·주택", svg: Icon.lnbIco6 },
+    { id: "7", subtitle: "안전", svg: Icon.lnbIco7 },
+    { id: "8", subtitle: "공원녹지·환경", svg: Icon.lnbIco8 },
+    { id: "9", subtitle: "교통·물류", svg: Icon.lnbIco9 },
+    { id: "10", subtitle: "해양논수산", svg: Icon.lnbIco10 },
+    { id: "11", subtitle: "행정", svg: Icon.lnbIco11 },
+    { id: "12", subtitle: "문화체육관광", svg: Icon.lnbIco12 },
+  ];
   return (
     <MainWrap>
       <div className="main_slide">
         <StyledSwiper
-          spaceBetween={30}
           effect={"fade"}
           speed={3000}
           pagination={{
@@ -82,72 +97,128 @@ const Main = () => {
         </StyledSwiper>
       </div>
       <div className="inner">
-        <p className="head_title">안내</p>
-        <div className="tag_box">
-          <ul>
-            <li>
-              <Link to="#">민생100일 비상조치+</Link>
-            </li>
-            <li>
-              <Link to="#">무더위 쉼터+</Link>
-            </li>
-            <li>
-              <Link to="#">고유가 피해지원금+</Link>
-            </li>
-            <li>
-              <Link to="#">공공계약 모니터링+</Link>
-            </li>
-            <li>
-              <Link to="#">주우서비스+</Link>
-            </li>
-            <li>
-              <Link to="#">시민참여+</Link>
-            </li>
-            <li>
-              <Link to="#">부산의 공원+</Link>
-            </li>
-            <li>
-              <Link to="#">도모헌+</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="gra_card_wrap">
-          <div className="card_item">
-            <Link to="#">
-              {/* 링크에 백그라운드 달력 이미지 추가해야함  */}
-              <p className="card_title">통합예약</p>
-              <p className="text">
-                <span>간편하게 예약하세요</span>
-                <span>강좌/교육,견학/체험,대관/대여</span>
-              </p>
-              <span>{/* 화살표아이콘 넣어야해 */}</span>
-            </Link>
-          </div>
-          <div className="card_item">
-            <p className="card_title">문화</p>
-            <ul>
+        {/* 중앙 가이드 영역 */}
+        <GuideSection>
+          <div className="head_title_box">
+            <p className="head_title">안내</p>
+            <ul className="tag_list">
               <li>
-                <Link to="#">부산문화포털 다봄</Link>
+                <Link to="#">민생100일 비상조치+</Link>
               </li>
               <li>
-                <Link to="#">부산콘서트홀</Link>
+                <Link to="#">무더위 쉼터+</Link>
               </li>
               <li>
-                <Link to="#">부산미래유산</Link>
+                <Link to="#">고유가 피해지원금+</Link>
               </li>
               <li>
-                <Link to="#"></Link>
+                <Link to="#">공공계약 모니터링+</Link>
+              </li>
+              <li>
+                <Link to="#">주요서비스+</Link>
+              </li>
+              <li>
+                <Link to="#">시민참여+</Link>
+              </li>
+              <li>
+                <Link to="#">부산의 공원+</Link>
+              </li>
+              <li>
+                <Link to="#">도모헌+</Link>
               </li>
             </ul>
           </div>
-          <div className="card_item"></div>
-          <div className="card_item">
-            <Link to="#"></Link>
+
+          <div className="gra_card_wrap">
+            <div className="card_item date">
+              <Link to="#">
+                <Icon.calendar className="calender_icon" />
+                <div className="title_box">
+                  <p className="card_title">통합예약</p>
+                  <div className="text">
+                    <p>간편하게 예약하세요</p>
+                    <p>강좌/교육,견학/체험,대관/대여</p>
+                  </div>
+                </div>
+                <div className="icon_box">
+                  <Icon.arrowHalf className="arrowhalf_icon" />
+                </div>
+              </Link>
+            </div>
+            <div className="card_item cul">
+              <p className="card_title">문화</p>
+              <ul className="cul_list">
+                <li>
+                  <Link to="#">부산문화포털 다봄</Link>
+                </li>
+                <li>
+                  <Link to="#">부산콘서트홀</Link>
+                </li>
+                <li>
+                  <Link to="#">부산미래유산</Link>
+                </li>
+                <li>
+                  <Link to="#">파란수도부산</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="card_item tour">
+              <div className="card_title_box">
+                <p className="card_title">관광</p>
+                <span className="card_btn">부산관광통계+</span>
+              </div>
+              <ul className="card_list">
+                <li>
+                  <Link to="#">{/* BGI 부산의 맛 */}</Link>
+                </li>
+                <li>
+                  <Link to="#">{/* BGI VISIT BUSAN */}</Link>
+                </li>
+                <li>
+                  <Link to="#">{/* BGI 부산갈맷길 */}</Link>
+                </li>
+                <li>
+                  <Link to="#">{/* BGI 메디컬 부산 */}</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="card_item mayor">
+              <p className="card_title">
+                <span>부산광역시장</span>
+                <span className="name">전재수</span>
+              </p>
+              <div className="card_list_box">
+                <ul className="card_list">
+                  <li>
+                    <Link to="#">정책제안+</Link>
+                  </li>
+                  <li>
+                    <Link to="#">일정+</Link>
+                  </li>
+                  <li>
+                    <Link to="#">취임사+</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
+          <div className="service_slide">
+            <ServiceSwiper slidesPerView={12}>
+              {IconSet.map((item) => {
+                const SvgIcon = item.svg;
+                return (
+                  <SwiperSlide key={item.id}>
+                    <div className="icon">{SvgIcon && <SvgIcon />}</div>
+                    <p className="icon_title">{item.subtitle}</p>
+                  </SwiperSlide>
+                );
+              })}
+            </ServiceSwiper>
+          </div>
+        </GuideSection>
       </div>
     </MainWrap>
   );
 };
 
-export default Main;
+export default MainPage;

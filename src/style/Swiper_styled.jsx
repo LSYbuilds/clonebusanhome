@@ -50,3 +50,48 @@ export const StyledSwiper = styled(Swiper)`
     }
   }
 `;
+
+export const ServiceSwiper = styled(Swiper)`
+  position: relative;
+  margin: 0 auto;
+  width: 1260px;
+  height: 100%;
+  overflow: hidden;
+  .swiper-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #fff;
+    width: auto;
+    height: 100%;
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 20px;
+      .icon {
+        text-align: center;
+        svg {
+          width: 50%;
+          height: 100%;
+          transition: transform 1s ease-in-out;
+        }
+      }
+      .icon_title {
+        text-align: center;
+        font-size: 0.825em;
+        color: #000;
+      }
+      &:hover {
+        .icon {
+          svg {
+            transform: rotateY(360deg);
+          }
+        }
+      }
+    }
+  }
+`;

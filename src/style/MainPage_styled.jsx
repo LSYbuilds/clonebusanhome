@@ -6,13 +6,273 @@ export const MainWrap = styled.div`
   .main_slide {
     width: 100vw;
     height: 100vh;
-    background-color: #723535;
   }
   .inner {
     margin: 0 auto;
     max-width: 1600px;
     width: 100%;
     height: 5000px;
-    background-color: #ccb4b4;
+  }
+`;
+
+export const GuideSection = styled.section`
+  @keyframes AnimateBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes AnimateBorder2 {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  width: 100%;
+  padding-top: 50px;
+  .head_title_box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 100px;
+    box-shadow: 15px 15px 50px 1px rgba(51, 51, 51, 0.09);
+    .head_title {
+      text-align: center;
+      font-size: 32px;
+      font-family: "KohiLearn", "Noto Sans KR", sans-serif;
+      color: #585858;
+    }
+    .tag_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      li {
+        padding: 10px;
+        a {
+          font-size: 18px;
+          padding: 5px 30px;
+          border: 2px solid rgb(34, 34, 34);
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+  .gra_card_wrap {
+    display: flex;
+    justify-content: space-between;
+    .card_item {
+      z-index: 1;
+      position: relative;
+      flex: 0 0 23%;
+      height: 200px;
+      background-color: whitesmoke;
+      padding: 32px 32px 16px 32px;
+      font-size: 14px;
+      border-radius: 30px;
+      overflow: hidden;
+      .card_title {
+        font-family: "KohiLearn", "Noto Sans KR";
+        font-size: 25px;
+        color: #333;
+      }
+    }
+    .date {
+      a {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .calender_icon {
+          position: absolute;
+          width: auto;
+          height: 50px;
+          top: 0px;
+          right: 0px;
+        }
+        .title_box {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        .icon_box {
+          position: relative;
+          width: 35px;
+          height: 35px;
+          border: 1px solid #333;
+          border-radius: 100%;
+          .arrowhalf_icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    .cul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-image: url("img/ico_cult.png");
+      background-repeat: no-repeat;
+      background-position: right 36px top 30px;
+      background-size: auto;
+      .cul_list {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          flex: 0 0 48%;
+          a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 8px 0px;
+            border-radius: 100px;
+            box-shadow: 0 0 1px #333;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .tour {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      background-image: url("/img/tour_thum.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      .card_title_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #fff;
+        .card_title {
+          color: #fff;
+        }
+        .card_btn {
+          border-radius: 100px;
+          border: 1px solid #fff;
+          padding: 4px 10px;
+        }
+      }
+      .card_list {
+        position: absolute;
+        top: 50%;
+        right: 32px;
+        transform: translate(0%, -50%);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        flex-wrap: wrap;
+        li {
+          width: 80px;
+          height: 80px;
+          border-radius: 100%;
+          background-color: #fff;
+          background-repeat: no-repeat;
+          background-position: center;
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+          &:first-child {
+            background-image: url("/img/ico_main_tour01.png");
+          }
+          &:nth-child(2) {
+            background-image: url("/img/ico_visitbusan.png");
+          }
+          &:nth-child(3) {
+            background-image: url("/img/ico_galmaet.png");
+          }
+          &:nth-child(4) {
+            background-image: url("/img/ico_medicalbusan.png");
+          }
+        }
+      }
+    }
+    .mayor {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        url("/img/sijang_new3.png") left 15px bottom no-repeat,
+        linear-gradient(to right, #033d99, #0190cf);
+      .card_title {
+        display: flex;
+        justify-content: flex-end;
+        gap: 4px;
+        align-items: end;
+        font-family: "Noto Sans KR", sans-serif;
+        color: #fff;
+        font-size: 13px;
+        .name {
+          font-size: 22px;
+          font-weight: bold;
+        }
+      }
+      .card_list_box {
+        display: flex;
+        justify-content: flex-end;
+        .card_list {
+          display: grid;
+          gap: 10px;
+          grid-template-columns: 120px 100px;
+          align-items: flex-end;
+          li {
+            text-align: left;
+            a {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              color: #fff;
+              padding: 8px 16px;
+              border: 1px solid rgba(255, 255, 255, 0.8);
+              border-radius: 30px;
+              text-decoration: none;
+              font-size: 14px;
+              box-sizing: border-box;
+              width: 100%;
+            }
+            &:nth-child(1) {
+              grid-column: 2;
+              grid-row: 1;
+            }
+            &:nth-child(2) {
+              grid-column: 1;
+              grid-row: 2;
+            }
+            &:nth-child(3) {
+              grid-column: 2;
+              grid-row: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+  .service_slide {
+    margin-top: 100px;
+    width: 100%;
+    height: 90px;
   }
 `;

@@ -226,8 +226,8 @@ const Header = () => {
               setHover(false);
             }}
           >
-            <div class="lnb_i">
-              <div class="lnb_list">
+            <div className="lnb_i">
+              <div className="lnb_list">
                 {headerdata.map((item) => (
                   <ul key={item.id} className="lnb_item">
                     {item.list.map((iitem) => {
