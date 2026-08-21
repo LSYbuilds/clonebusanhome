@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   MainWrap,
   GuideSection,
   NoticeSection,
+  CommuSection,
 } from "../style/MainPage_styled";
 import {
   StyledSwiper,
@@ -18,7 +19,9 @@ import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
 import Icon from "../components/SvgComponents";
 import noticeData from "../assets/data/notice.json";
+import { img, p } from "framer-motion/client";
 const MainPage = () => {
+  const [hoveredId, setHoveredId] = useState(null);
   const slidedata = [
     {
       id: "1",
@@ -71,7 +74,145 @@ const MainPage = () => {
     { id: "11", subtitle: "행정", svg: Icon.lnbIco11 },
     { id: "12", subtitle: "문화체육관광", svg: Icon.lnbIco12 },
   ];
-  console.log("언디파인드?", noticeData.notice);
+  const buttonSet = [
+    {
+      id: 1,
+      text: "의 공연&전시+",
+      svg: "",
+      src: "",
+    },
+    {
+      id: 2,
+      text: "행사&축제+",
+      svg: Icon.commuIconBusan,
+      svgh: Icon.commuIconBusanH,
+      src: "",
+    },
+    {
+      id: 3,
+      text: "보도자료+",
+      svg: Icon.commuIconMic,
+      svgh: Icon.commuIconMicH,
+      src: "",
+    },
+    {
+      id: 4,
+      text: "부산시보+",
+      svg: Icon.commuIconNote,
+      svgh: Icon.commuIconNoteH,
+      src: "",
+    },
+    {
+      id: 5,
+      text: "전자책(e-book)+",
+      svg: Icon.commuIconNote,
+      svgh: Icon.commuIconNoteH,
+      src: "",
+    },
+    {
+      id: 6,
+      text: "부산어린이신문+",
+      svg: "",
+      src: "/img/icon_18.png",
+      srch: "/img/icon_18_h.png",
+    },
+    {
+      id: 7,
+      text: "부산튜브+",
+      svg: Icon.commuIconYoutube,
+      svgh: Icon.commuIconYoutubeH,
+      src: "",
+    },
+    {
+      id: 8,
+      text: "인스타그램+",
+      svg: "",
+      src: "/img/instar_icon.png",
+      scrh: "/img/instar_icon_h.png",
+    },
+    {
+      id: 9,
+      text: "블로그+",
+      svg: "",
+      src: "",
+    },
+    {
+      id: 10,
+      text: "페이스북+",
+      svg: Icon.commuIconFace,
+      svgh: Icon.commuIconFaceH,
+    },
+    {
+      id: 11,
+      text: "X+",
+      svg: "",
+      src: "/img/ico_X_co.png",
+      srch: "/img/ico_X_co_h.png",
+    },
+    {
+      id: 12,
+      text: "카카오스토리+",
+      svg: "",
+      src: "/img/ico_kakao_co.png",
+      srch: "/img/ico_kakao_co_h.png",
+    },
+    {
+      id: 13,
+      text: "SNS 모아보기+",
+      svg: "",
+      src: "/img/icon_17.png",
+      srch: "/img/icon_17_h.png",
+    },
+    {
+      id: 14,
+      text: "비비빅+",
+      svg: "",
+      src: "/img/icon_20.png",
+      srch: "/img/icon_20_h.png",
+    },
+    {
+      id: 15,
+      text: "소통캐릭터 부기+",
+      svg: Icon.commuIconBugi,
+      svgh: Icon.commuIconBugiH,
+      src: "",
+    },
+    {
+      id: 16,
+      text: "부산영어방송+",
+      svg: "",
+      src: "/img/ico_beb_color.png",
+      srch: "/img/ico_beb_color_h.png",
+    },
+    {
+      id: 17,
+      text: "재미있는 부산+",
+      svg: "",
+      src: "/img/icon_camp.png",
+      srch: "/img/icon_camp_h.png",
+    },
+    {
+      id: 18,
+      text: "부산파크골프+",
+      svg: "",
+      src: "/img/icon_park.png",
+      srch: "/img/icon_park_h.png",
+    },
+    {
+      id: 19,
+      text: "부산 영상 아카이브+",
+      svg: "",
+      src: "/img/icon_19.png",
+      srch: "/img/icon_19_h.png",
+    },
+    {
+      id: 20,
+      text: "시정소식 문자알림서비스+",
+      svg: "",
+      src: "/img/icon_17.png",
+      srch: "/img/icon_17h.png",
+    },
+  ];
   const NoticeData = noticeData.notice;
   return (
     <MainWrap>
@@ -251,8 +392,70 @@ const MainPage = () => {
                 ))}
               </NoticeSwiper>
             </div>
+            <div className="inform_list">
+              <div className="inform_item">
+                <div className="sub_title_box">
+                  <span className="sub_title">고시공고</span>
+                  <span className="more_btn">go +</span>
+                </div>
+              </div>
+              <div className="inform_item">
+                <div className="sub_title_box">
+                  <span className="sub_title">채용정보</span>
+                  <span className="more_btn">go +</span>
+                </div>
+              </div>
+              <div className="inform_item">
+                <div className="sub_title_box">
+                  <span className="sub_title">시험공고</span>
+                  <span className="more_btn">go +</span>
+                </div>
+              </div>
+            </div>
           </div>
         </NoticeSection>
+        {/* 소통영역 */}
+        <CommuSection>
+          <div className="head_title_box">
+            <p className="head_title">소통</p>
+          </div>
+          <div className="news_area">
+            <div className="tag_news">
+              <ul className="tag_list">
+                {buttonSet.map((item) => {
+                  // 2. 현재 아이템의 id가 hoveredId와 일치할 때만 호버 아이콘/이미지 적용
+                  const isHovered = hoveredId === item.id;
+                  const SvgIcon = isHovered && item.svgh ? item.svgh : item.svg;
+                  const imgSrc = isHovered && item.srch ? item.srch : item.src;
+
+                  return (
+                    <li
+                      key={item.id}
+                      className="tag_item"
+                      // 3. 마우스가 올라간 아이템의 id를 저장, 벗어나면 null로 초기화
+                      onMouseEnter={() => setHoveredId(item.id)}
+                      onMouseLeave={() => setHoveredId(null)}
+                    >
+                      {SvgIcon ? (
+                        <span className="svg_box">
+                          <SvgIcon />
+                        </span>
+                      ) : imgSrc ? (
+                        <img src={imgSrc} alt="이미지" />
+                      ) : item.text === "오늘의 공연&전시+" ? (
+                        <p className="today">오늘</p>
+                      ) : (
+                        <p className="blog">B</p>
+                      )}
+                      <span className="text">{item.text}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="news_scrap"></div>
+          </div>
+        </CommuSection>
       </div>
     </MainWrap>
   );

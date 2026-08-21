@@ -111,15 +111,14 @@ export const NoticeSwiper = styled(Swiper)`
     justify-content: space-between;
     color: #fff;
     width: auto;
-    height: 100%;
     .swiper-slide {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      box-shadow: 15px 15px 50px 1px rgba(51, 51, 51, 0.09);
       padding: 30px;
       border-radius: 25px;
       color: #000;
+      box-shadow: 15px 15px 50px 1px rgba(51, 51, 51, 0.09);
       .notice_title {
         font-size: 18px;
         font-weight: 600;

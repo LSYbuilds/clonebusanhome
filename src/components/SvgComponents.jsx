@@ -15,6 +15,17 @@ import LnbIco9 from "../assets/svg/icon/lnb_ico9.svg?react";
 import LnbIco10 from "../assets/svg/icon/lnb_ico10.svg?react";
 import LnbIco11 from "../assets/svg/icon/lnb_ico11.svg?react";
 import LnbIco12 from "../assets/svg/icon/lnb_ico12.svg?react";
+import CommuIconBusan from "../assets/svg/icon/commnu_busan.svg?react";
+import CommuIconBusanH from "../assets/svg/icon/commnu_busan_h.svg?react";
+import CommuIconBugi from "../assets/svg/icon/commnu_bugi.svg?react";
+import CommuIconFace from "../assets/svg/icon/commnu_facebook.svg?react";
+import CommuIconFaceH from "../assets/svg/icon/commnu_facebook_h.svg?react";
+import CommuIconMic from "../assets/svg/icon/commnu_mic.svg?react";
+import CommuIconMicH from "../assets/svg/icon/commnu_mic_h.svg?react";
+import CommuIconNote from "../assets/svg/icon/commnu_note.svg?react";
+import CommuIconNoteH from "../assets/svg/icon/commnu_note_h.svg?react";
+import CommuIconYoutube from "../assets/svg/icon/commnu_youtube.svg?react";
+import CommuIconYoutubeH from "../assets/svg/icon/commnu_youtube_h.svg?react";
 
 const Icon = {
   logo: Logo,
@@ -34,6 +45,17 @@ const Icon = {
   lnbIco10: LnbIco10,
   lnbIco11: LnbIco11,
   lnbIco12: LnbIco12,
+  commuIconBusan: CommuIconBusan,
+  commuIconBusanH: CommuIconBusanH,
+  commuIconBugi: CommuIconBugi,
+  commuIconFace: CommuIconFace,
+  commuIconFaceH: CommuIconFaceH,
+  commuIconMic: CommuIconMic,
+  commuIconMicH: CommuIconMicH,
+  commuIconNote: CommuIconNote,
+  commuIconNoteH: CommuIconNoteH,
+  commuIconYoutube: CommuIconYoutube,
+  commuIconYoutubeH: CommuIconYoutubeH,
 };
 
 export default Icon;
