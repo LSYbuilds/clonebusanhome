@@ -12,6 +12,16 @@ export const MainWrap = styled.div`
     max-width: 1600px;
     width: 100%;
     height: 5000px;
+    section {
+      padding-top: 50px;
+      padding-bottom: 100px;
+    }
+    .head_title {
+      text-align: center;
+      font-size: 32px;
+      font-family: "KohiLearn", "Noto Sans KR", sans-serif;
+      color: #585858;
+    }
   }
 `;
 
@@ -39,19 +49,11 @@ export const GuideSection = styled.section`
     }
   }
   width: 100%;
-  padding-top: 50px;
   .head_title_box {
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-bottom: 100px;
-    box-shadow: 15px 15px 50px 1px rgba(51, 51, 51, 0.09);
-    .head_title {
-      text-align: center;
-      font-size: 32px;
-      font-family: "KohiLearn", "Noto Sans KR", sans-serif;
-      color: #585858;
-    }
     .tag_list {
       display: flex;
       justify-content: center;
@@ -77,11 +79,11 @@ export const GuideSection = styled.section`
       position: relative;
       flex: 0 0 23%;
       height: 200px;
-      background-color: whitesmoke;
       padding: 32px 32px 16px 32px;
       font-size: 14px;
       border-radius: 30px;
       overflow: hidden;
+      box-shadow: 15px 15px 50px 1px rgba(51, 51, 51, 0.09);
       .card_title {
         font-family: "KohiLearn", "Noto Sans KR";
         font-size: 25px;
@@ -274,5 +276,32 @@ export const GuideSection = styled.section`
     margin-top: 100px;
     width: 100%;
     height: 90px;
+    .service_in {
+      margin: 0 auto;
+      width: 1260px;
+      height: 100%;
+    }
+  }
+`;
+
+export const NoticeSection = styled.section`
+  .notice_wrap {
+    width: 100%;
+    height: auto;
+    .sub_title_box {
+      width: 31%;
+      display: flex;
+      justify-content: space-between;
+      height: auto;
+      padding: 20px 0px;
+      .sub_title {
+        font-family: "KohiLearn", "Noto Sans KR", sans-serif;
+        font-size: 20px;
+      }
+    }
+    .notice_list {
+      width: 100%;
+      padding: 20px 0px;
+    }
   }
 `;

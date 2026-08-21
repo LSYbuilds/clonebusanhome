@@ -54,7 +54,7 @@ export const StyledSwiper = styled(Swiper)`
 export const ServiceSwiper = styled(Swiper)`
   position: relative;
   margin: 0 auto;
-  width: 1260px;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   .swiper-wrapper {
@@ -91,6 +91,53 @@ export const ServiceSwiper = styled(Swiper)`
             transform: rotateY(360deg);
           }
         }
+      }
+    }
+  }
+`;
+
+export const NoticeSwiper = styled(Swiper)`
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 195px;
+  overflow: hidden;
+  .swiper-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    width: auto;
+    height: 100%;
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 15px 15px 50px 1px rgba(51, 51, 51, 0.09);
+      padding: 30px;
+      border-radius: 25px;
+      color: #000;
+      .notice_title {
+        font-size: 18px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        letter-spacing: -0.1rem;
+        color: #585858;
+      }
+      .notice_text {
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        letter-spacing: -0.1rem;
+        color: #888;
       }
     }
   }

@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MainWrap, GuideSection } from "../style/MainPage_styled";
-import { StyledSwiper, ServiceSwiper } from "../style/Swiper_styled";
+import {
+  MainWrap,
+  GuideSection,
+  NoticeSection,
+} from "../style/MainPage_styled";
+import {
+  StyledSwiper,
+  ServiceSwiper,
+  NoticeSwiper,
+} from "../style/Swiper_styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
 import "swiper/css/effect-fade";
@@ -9,6 +17,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
 import Icon from "../components/SvgComponents";
+import noticeData from "../assets/data/notice.json";
 const MainPage = () => {
   const slidedata = [
     {
@@ -62,6 +71,8 @@ const MainPage = () => {
     { id: "11", subtitle: "행정", svg: Icon.lnbIco11 },
     { id: "12", subtitle: "문화체육관광", svg: Icon.lnbIco12 },
   ];
+  console.log("언디파인드?", noticeData.notice);
+  const NoticeData = noticeData.notice;
   return (
     <MainWrap>
       <div className="main_slide">
@@ -203,19 +214,45 @@ const MainPage = () => {
             </div>
           </div>
           <div className="service_slide">
-            <ServiceSwiper slidesPerView={12}>
-              {IconSet.map((item) => {
-                const SvgIcon = item.svg;
-                return (
-                  <SwiperSlide key={item.id}>
-                    <div className="icon">{SvgIcon && <SvgIcon />}</div>
-                    <p className="icon_title">{item.subtitle}</p>
-                  </SwiperSlide>
-                );
-              })}
-            </ServiceSwiper>
+            {/* 이거 1260px */}
+            <div className="service_in">
+              <ServiceSwiper slidesPerView={12}>
+                {IconSet.map((item) => {
+                  const SvgIcon = item.svg;
+                  return (
+                    <SwiperSlide key={item.id}>
+                      <div className="icon">{SvgIcon && <SvgIcon />}</div>
+                      <p className="icon_title">{item.subtitle}</p>
+                    </SwiperSlide>
+                  );
+                })}
+              </ServiceSwiper>
+            </div>
           </div>
         </GuideSection>
+        {/* 알림영역 */}
+        <NoticeSection>
+          <div className="head_title_box">
+            <p className="head_title">알림</p>
+          </div>
+          <div className="notice_wrap">
+            <div className="sub_title_box">
+              <span className="sub_title">공지사항</span>
+              <span className="more_btn">go +</span>
+            </div>
+            <div className="notice_list">
+              <NoticeSwiper slidesPerView={3} spaceBetween={50}>
+                {NoticeData.map((item) => (
+                  <SwiperSlide key={item.id}>
+                    <p className="notice_title">{item.title}</p>
+                    <p className="notice_text">{item.text}</p>
+                    <p className="notice_date">{item.date}</p>
+                  </SwiperSlide>
+                ))}
+              </NoticeSwiper>
+            </div>
+          </div>
+        </NoticeSection>
       </div>
     </MainWrap>
   );
