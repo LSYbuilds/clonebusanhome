@@ -207,10 +207,10 @@ const MainPage = () => {
     },
     {
       id: 20,
-      text: "시정소식 문자알림서비스+",
+      text: "시청소식 문자알림서비스+",
       svg: "",
       src: "/img/icon_17.png",
-      srch: "/img/icon_17h.png",
+      srch: "/img/icon_17_h.png",
     },
   ];
   const NoticeData = noticeData.notice;
@@ -442,7 +442,7 @@ const MainPage = () => {
                         </span>
                       ) : imgSrc ? (
                         <img src={imgSrc} alt="이미지" />
-                      ) : item.text === "오늘의 공연&전시+" ? (
+                      ) : item.text === " 의 공연&전시+" ? (
                         <p className="today">오늘</p>
                       ) : (
                         <p className="blog">B</p>
