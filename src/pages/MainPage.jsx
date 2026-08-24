@@ -5,18 +5,27 @@ import {
   GuideSection,
   NoticeSection,
   CommuSection,
+  BannerSection,
 } from "../style/MainPage_styled";
 import {
   StyledSwiper,
   ServiceSwiper,
   NoticeSwiper,
+  BannerSwiper,
 } from "../style/Swiper_styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
+import "swiper/css/effect-coverflow";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
+import {
+  EffectCoverflow,
+  EffectFade,
+  Navigation,
+  Pagination,
+  Autoplay,
+} from "swiper/modules";
 import Icon from "../components/SvgComponents";
 import noticeData from "../assets/data/notice.json";
 import { img, p } from "framer-motion/client";
@@ -211,6 +220,36 @@ const MainPage = () => {
       svg: "",
       src: "/img/icon_17.png",
       srch: "/img/icon_17_h.png",
+    },
+  ];
+  const bannerSlide = [
+    {
+      id: "1",
+      src: "/img/banner/banner1.jpg",
+    },
+    {
+      id: "2",
+      src: "/img/banner/banner2.jpg",
+    },
+    {
+      id: "3",
+      src: "/img/banner/banner3.jpg",
+    },
+    {
+      id: "4",
+      src: "/img/banner/banner4.jpg",
+    },
+    {
+      id: "5",
+      src: "/img/banner/banner5.jpg",
+    },
+    {
+      id: "6",
+      src: "/img/banner/banner6.jpg",
+    },
+    {
+      id: "7",
+      src: "/img/banner/banner7.jpg",
     },
   ];
   const NoticeData = noticeData.notice;
@@ -453,9 +492,119 @@ const MainPage = () => {
                 })}
               </ul>
             </div>
-            <div className="news_scrap"></div>
+            <div className="news_scrap">
+              <div class="news_list">
+                <div className="news_item">
+                  <Link to="#" className="news_in">
+                    <div className="item_info">
+                      <p className="info_title">
+                        <span>보도</span>
+                        <span>자료</span>
+                      </p>
+                      <p className="info_text">
+                        부산시, 중국 베이징에서 마이스 시장 공략을 위한
+                        "로드쇼(유치설명회" 개최
+                      </p>
+                    </div>
+                    <div className="news_img">
+                      <img
+                        src="https://www.busan.go.kr/imgBBSTY3/20260824/082407B5416864-ac2d52755d654d3291d4539f3a914d16.png"
+                        alt="카드이미지"
+                      />
+                    </div>
+                  </Link>
+                </div>
+                <div className="news_item">
+                  <Link to="#" className="news_in">
+                    <div className="item_info">
+                      <p className="info_title">
+                        <span>부산</span>
+                        <span>시보</span>
+                      </p>
+                      <p className="info_text">
+                        이 열차는 '행복행 열차' 입니다, 열차가 곧 출발합니다.
+                      </p>
+                    </div>
+                    <div className="news_img">
+                      <img
+                        src="https://www.busan.go.kr/imgARTICLE/20260814/081416B0419452-add551ce385f4a988eb1b1e71785e273.jpg"
+                        alt="카드이미지"
+                      />
+                    </div>
+                  </Link>
+                </div>
+                <div className="news_item">
+                  <Link to="#" className="news_in">
+                    <div className="item_info">
+                      <p className="info_title">
+                        <span>블로그</span>
+                      </p>
+                      <p className="info_text">
+                        부산보건환경연구원 연구과제 공모 | 시민의 일상 속
+                        아이디어가 건강한 부산을 만듭니다
+                      </p>
+                    </div>
+                    <div className="news_img">
+                      <img
+                        src="https://www.busan.go.kr/snsimg/naver/224385526284.png"
+                        alt="카드이미지"
+                      />
+                    </div>
+                  </Link>
+                </div>
+                <div className="news_item">
+                  <Link to="#" className="news_in">
+                    <div className="item_info">
+                      <p className="info_title">
+                        <span>부산튜브</span>
+                      </p>
+                      <p className="info_text">
+                        부산시, 중국 베이징에서 마이스 시장 공략을 위한
+                        "로드쇼(유치설명회" 개최
+                      </p>
+                    </div>
+                    <div className="news_img">
+                      <img
+                        src="https://i.ytimg.com/vi/hy84z7NaWmU/sddefault.jpg"
+                        alt="카드이미지"
+                      ></img>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </CommuSection>
+        {/* 배너영역 */}
+        <BannerSection>
+          <div className="head_title_box">
+            <p className="head_title">배너</p>
+          </div>
+          <div className="banner_slide_area">
+            <BannerSwiper
+              modules={[EffectCoverflow, Pagination, Navigation]}
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={"auto"} // 문자열 'auto'로 수정
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+                slideShadows: true,
+              }}
+              pagination={{ clickable: true }}
+              navigation={true}
+            >
+              {bannerSlide.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <img src={item.src} alt="배너 슬라이드" />
+                </SwiperSlide>
+              ))}
+            </BannerSwiper>
+          </div>
+        </BannerSection>
       </div>
     </MainWrap>
   );

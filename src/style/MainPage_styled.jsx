@@ -16,6 +16,9 @@ export const MainWrap = styled.div`
       padding-top: 50px;
       padding-bottom: 100px;
     }
+    .head_title_box {
+      margin-bottom: 100px;
+    }
     .head_title {
       text-align: center;
       font-size: 32px;
@@ -331,10 +334,11 @@ export const NoticeSection = styled.section`
 export const CommuSection = styled.section`
   .news_area {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     .tag_news {
-      width: 50%;
+      flex: 0 0 40%;
       .tag_list {
         display: flex;
         flex-wrap: wrap;
@@ -346,7 +350,7 @@ export const CommuSection = styled.section`
           justify-content: center;
           border-radius: 100px;
           box-shadow: 0px 0px 2px black;
-          padding: 10px;
+          padding: 10px 20px;
           font-size: 18px;
           gap: 8px;
           align-items: center;
@@ -378,5 +382,81 @@ export const CommuSection = styled.section`
         }
       }
     }
+    .news_scrap {
+      flex: 0 0 52%;
+      max-width: 52%;
+      .news_list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 38px;
+        justify-content: space-between;
+        width: 100%;
+        .news_item {
+          position: relative;
+          flex: 0 0 48%;
+          padding: 40px;
+          height: 410px;
+          .news_in {
+            position: absolute;
+            top: 0px;
+            display: flex;
+            flex-direction: column;
+            height: 410px;
+            border-radius: 35px;
+            overflow: hidden;
+            box-shadow: 15px 15px 50px 1px rgba(51, 51, 51, 0.09);
+            .item_info {
+              display: flex;
+              flex-direction: column;
+              padding: 35px;
+              .info_title {
+                display: flex;
+                flex-direction: column;
+                color: #585858;
+                line-height: 28px;
+                font-size: 25px;
+                font-family: "KohiLearn", "Noto Sans KR", sans-serif;
+                margin-bottom: 10px;
+              }
+              .info_text {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
+            }
+            .news_img {
+              height: 255px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              }
+            }
+          }
+          &:nth-child(2) {
+            .news_in {
+              top: 40px;
+            }
+          }
+          &:nth-child(4) {
+            .news_in {
+              top: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const BannerSection = styled.section`
+  .banner_slide_area {
+    margin: 0 auto;
+    width: 1400px;
+    height: 500px;
+    background-color: #5a4a4a;
   }
 `;

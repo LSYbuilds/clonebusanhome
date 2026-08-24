@@ -141,3 +141,35 @@ export const NoticeSwiper = styled(Swiper)`
     }
   }
 `;
+
+export const BannerSwiper = styled(Swiper)`
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .swiper-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    .swiper-slide {
+      width: 500px;
+      transition: transform 0.3s ease;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px; /* 이미지 모서리도 둥글게 맞추기 */
+      }
+    }
+    .swiper-slide:not(.swiper-slide-active) {
+      opacity: 0.6; /* 양옆 슬라이드는 살짝 흐리게 */
+    }
+  }
+`;
