@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import bannerIcon from "/src/assets/svg/icon/ico_img.svg";
+import bannerIconW from "/src/assets/svg/icon/ico_img_w.svg";
 
 export const MainWrap = styled.div`
   width: 100%;
@@ -24,6 +26,32 @@ export const MainWrap = styled.div`
       font-size: 32px;
       font-family: "KohiLearn", "Noto Sans KR", sans-serif;
       color: #585858;
+    }
+    .event_banner {
+      display: flex;
+      justify-content: flex-start;
+      align-content: stretch;
+      width: 100%;
+      height: 319px;
+      gap: 0 33px;
+      li {
+        max-width: 375px;
+        width: 25%;
+        aspect-ratio: 375 / 319;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 `;
@@ -457,5 +485,33 @@ export const BannerSection = styled.section`
     margin: 0 auto;
     width: 1400px;
     height: 500px;
+  }
+  .banner_link {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    a {
+      position: relative;
+      display: block;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      padding: 17px 120px 17px 160px;
+      height: 100%;
+      border-radius: 200px;
+      border: 1px solid black;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 15%;
+        transform: translate(-0%, -50%);
+        width: 42px;
+        height: 26px;
+        background-image: url(/img/ico_img.svg);
+        background-repeat: no-repeat;
+      }
+    }
   }
 `;

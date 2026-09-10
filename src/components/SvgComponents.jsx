@@ -26,6 +26,8 @@ import CommuIconNote from "../assets/svg/icon/commnu_note.svg?react";
 import CommuIconNoteH from "../assets/svg/icon/commnu_note_h.svg?react";
 import CommuIconYoutube from "../assets/svg/icon/commnu_youtube.svg?react";
 import CommuIconYoutubeH from "../assets/svg/icon/commnu_youtube_h.svg?react";
+import BannerIconB from "../assets/svg/icon/ico_img.svg?react";
+import BannerIconW from "../assets/svg/icon/ico_img_w.svg?react";
 
 const Icon = {
   logo: Logo,
@@ -56,6 +58,8 @@ const Icon = {
   commuIconNoteH: CommuIconNoteH,
   commuIconYoutube: CommuIconYoutube,
   commuIconYoutubeH: CommuIconYoutubeH,
+  bannerIconB : BannerIconB,
+  bannerIconW : BannerIconW,
 };
 
 export default Icon;

@@ -493,7 +493,7 @@ const MainPage = () => {
               </ul>
             </div>
             <div className="news_scrap">
-              <div class="news_list">
+              <div className="news_list">
                 <div className="news_item">
                   <Link to="#" className="news_in">
                     <div className="item_info">
@@ -612,6 +612,20 @@ const MainPage = () => {
             <Link to="#">부산시 알림배너</Link>
           </div>
         </BannerSection>
+        <ul className="event_banner">
+          <li>
+            <Link><img src="/img/event/getImage1.jpg" alt="이벤트배너" /></Link>
+          </li>
+          <li>
+            <Link><img src="/img/event/getImage2.jpg" alt="이벤트배너" /></Link>
+          </li>
+          <li>
+            <Link><img src="/img/event/getImage3.jpg" alt="이벤트배너" /></Link>
+          </li>
+          <li>
+            <Link><img src="/img/event/getImage4.jpg" alt="이벤트배너" /></Link>
+          </li>
+        </ul>
       </div>
     </MainWrap>
   );
