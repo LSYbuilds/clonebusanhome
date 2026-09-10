@@ -457,6 +457,5 @@ export const BannerSection = styled.section`
     margin: 0 auto;
     width: 1400px;
     height: 500px;
-    background-color: #5a4a4a;
   }
 `;

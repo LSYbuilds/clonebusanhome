@@ -143,33 +143,64 @@ export const NoticeSwiper = styled(Swiper)`
 `;
 
 export const BannerSwiper = styled(Swiper)`
-  position: relative;
   margin: 0 auto;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
   .swiper-wrapper {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: auto;
-    height: 100%;
+    top:0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    color: #fff;
+    align-items: center;
+    height: 90%;
     .swiper-slide {
-      width: 500px;
-      transition: transform 0.3s ease;
+      position: relative;
+      align-content: center;
+      width: 800px;
+      height: 100%;
       img {
-        width: 100%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        display: block;
         height: 100%;
-        object-fit: cover;
-        border-radius: 20px; /* 이미지 모서리도 둥글게 맞추기 */
+        border-radius: 20px;
+        border: 2px solid rgb(136, 136, 136,0.3);
+        transition-duration: 1s;
       }
     }
     .swiper-slide:not(.swiper-slide-active) {
-      opacity: 0.6; /* 양옆 슬라이드는 살짝 흐리게 */
+      position: relative;
+      img{
+        border-radius: 20px;
+        height: 80%;
+      }
+    }::after{
+      position: absolute;
+      top:0px;
+      left:0px;
+      width: 100%;
+      content: "";
+      height: 100%;
+      background-color: rgb(255, 255, 255,0.7);
+    }
+    .swiper-slide-active {
+      opacity: 1;
+    }
+  }
+  .swiper-pagination{
+    .swiper-pagination-bullet{
+      width: 17px;
+      height: 17px;
+      background-color: #ccc;
+    }
+    .swiper-pagination-bullet-active{
+      width:calc( 17*3px);
+      border-radius: 100px;
+      background-color: #1e4da4;
     }
   }
 `;

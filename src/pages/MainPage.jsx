@@ -586,16 +586,20 @@ const MainPage = () => {
               effect={"coverflow"}
               grabCursor={true}
               centeredSlides={true}
-              slidesPerView={"auto"} // 문자열 'auto'로 수정
+              slidesPerView={"auto"}
+              spaceBetween={"-30%"}
+              autoplay={true}
+              loop
               coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
                 depth: 100,
                 modifier: 2.5,
-                slideShadows: true,
+                slideShadows: false,
               }}
               pagination={{ clickable: true }}
               navigation={true}
+              speed={1000}
             >
               {bannerSlide.map((item) => (
                 <SwiperSlide key={item.id}>
@@ -603,6 +607,9 @@ const MainPage = () => {
                 </SwiperSlide>
               ))}
             </BannerSwiper>
+          </div>
+          <div className="banner_link">
+            <Link to="#">부산시 알림배너</Link>
           </div>
         </BannerSection>
       </div>
