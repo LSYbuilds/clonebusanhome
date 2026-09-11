@@ -13,7 +13,7 @@ export const MainWrap = styled.div`
     margin: 0 auto;
     max-width: 1600px;
     width: 100%;
-    height: 5000px;
+    padding-bottom: 100px;
     section {
       padding-top: 50px;
       padding-bottom: 100px;
