@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { HeaderWrap } from "../style/Header_styled";
-import Icon from "./SvgComponents";
-const Header = () => {
+import { HeaderWrap } from "../../style/mainStyle/Header_styled";
+import Icon from "../common/SvgComponents";
+const MainHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [hover, setHover] = useState(false);
   const [lang, setLang] = useState(false);
@@ -117,13 +117,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#">
+                <Link to="/depart">
                   <span>부산관광</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="#">
-                  <span>청사안내</span>
                 </Link>
               </li>
               <li>
@@ -258,4 +253,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainHeader;

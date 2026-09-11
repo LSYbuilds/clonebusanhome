@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { FooterWrap } from "../style/Footer_styled";
+import { FooterWrap } from "../../style/mainStyle/Footer_styled";
 import { Link } from "react-router-dom";
-import Icon from "../components/SvgComponents";
-import busanLogo from "../assets/svg/busan_logo.svg";
+import Icon from "../common/SvgComponents";
+import busanLogo from "../../assets/svg/busan_logo.svg";
 
-const Footer = () => {
+const MainFooter = () => {
   const [tabOne, setTabOne] = useState(false);
   const [tabTwo, setTabTwo] = useState(false);
   const snsList = [
@@ -279,4 +279,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default MainFooter;

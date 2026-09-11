@@ -6,13 +6,13 @@ import {
   NoticeSection,
   CommuSection,
   BannerSection,
-} from "../style/MainPage_styled";
+} from "../../style/mainStyle/MainPage_styled";
 import {
   StyledSwiper,
   ServiceSwiper,
   NoticeSwiper,
   BannerSwiper,
-} from "../style/Swiper_styled";
+} from "../../style/mainStyle/Swiper_styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -26,8 +26,8 @@ import {
   Pagination,
   Autoplay,
 } from "swiper/modules";
-import Icon from "../components/SvgComponents";
-import noticeData from "../assets/data/notice.json";
+import Icon from "../../components/common/SvgComponents";
+import noticeData from "../../assets/data/notice.json";
 import { img, p } from "framer-motion/client";
 const MainPage = () => {
   const [hoveredId, setHoveredId] = useState(null);
@@ -614,16 +614,24 @@ const MainPage = () => {
         </BannerSection>
         <ul className="event_banner">
           <li>
-            <Link><img src="/img/event/getImage1.jpg" alt="이벤트배너" /></Link>
+            <Link>
+              <img src="/img/event/getImage1.jpg" alt="이벤트배너" />
+            </Link>
           </li>
           <li>
-            <Link><img src="/img/event/getImage2.jpg" alt="이벤트배너" /></Link>
+            <Link>
+              <img src="/img/event/getImage2.jpg" alt="이벤트배너" />
+            </Link>
           </li>
           <li>
-            <Link><img src="/img/event/getImage3.jpg" alt="이벤트배너" /></Link>
+            <Link>
+              <img src="/img/event/getImage3.jpg" alt="이벤트배너" />
+            </Link>
           </li>
           <li>
-            <Link><img src="/img/event/getImage4.jpg" alt="이벤트배너" /></Link>
+            <Link>
+              <img src="/img/event/getImage4.jpg" alt="이벤트배너" />
+            </Link>
           </li>
         </ul>
       </div>
