@@ -82,7 +82,7 @@ export const ServiceSwiper = styled(Swiper)`
       }
       .icon_title {
         text-align: center;
-        font-size: 0.825em;
+        font-size: 1.4em;
         color: #000;
       }
       &:hover {
@@ -150,7 +150,7 @@ export const BannerSwiper = styled(Swiper)`
   position: relative;
   .swiper-wrapper {
     position: absolute;
-    top:0px;
+    top: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -162,43 +162,44 @@ export const BannerSwiper = styled(Swiper)`
       height: 100%;
       img {
         position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: block;
         height: 100%;
         border-radius: 20px;
-        border: 2px solid rgb(136, 136, 136,0.3);
+        border: 2px solid rgb(136, 136, 136, 0.3);
         transition-duration: 1s;
       }
     }
     .swiper-slide:not(.swiper-slide-active) {
       position: relative;
-      img{
+      img {
         border-radius: 20px;
         height: 80%;
       }
-    }::after{
+    }
+    ::after {
       position: absolute;
-      top:0px;
-      left:0px;
+      top: 0px;
+      left: 0px;
       width: 100%;
       content: "";
       height: 100%;
-      background-color: rgb(255, 255, 255,0.7);
+      background-color: rgb(255, 255, 255, 0.7);
     }
     .swiper-slide-active {
       opacity: 1;
     }
   }
-  .swiper-pagination{
-    .swiper-pagination-bullet{
+  .swiper-pagination {
+    .swiper-pagination-bullet {
       width: 17px;
       height: 17px;
       background-color: #ccc;
     }
-    .swiper-pagination-bullet-active{
-      width:calc( 17*3px);
+    .swiper-pagination-bullet-active {
+      width: calc(17 * 3px);
       border-radius: 100px;
       background-color: #1e4da4;
     }

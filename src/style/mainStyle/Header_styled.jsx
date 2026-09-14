@@ -2,6 +2,24 @@ import styled from "@emotion/styled";
 import busanLogo from "/src/assets/svg/busan_logo.svg";
 import logoSlogan from "/src/assets/svg/logo_slogan.svg";
 
+/*
+반응형 분기점
+-PC-
+1620px
+1500px
+1400px
+1300px
+1280px
+-테블릿-
+1280px
+1040px
+768px
+-모바일-
+425px
+375px
+320px
+*/
+
 const getLogo = (props) =>
   props.scrolled || props.hover ? busanLogo : logoSlogan;
 const bgChange = (props) => (props.scrolled || props.hover ? "#000" : "#fff");
@@ -245,5 +263,22 @@ export const HeaderWrap = styled.div`
     top: 100%;
     left: 0px;
     background-color: rgb(0, 0, 0, 0.7);
+  }
+  @media (max-width: 1620px) {
+    .header_i {
+      .nav_wrap {
+        .gnb_bar {
+          .gnb {
+            .gnb_list {
+              .gnb_item {
+                a {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 `;

@@ -101,7 +101,7 @@ export const GuideSection = styled.section`
       li {
         padding: 10px;
         a {
-          font-size: 18px;
+          font-size: 1.8em;
           padding: 5px 30px;
           border: 2px solid rgb(34, 34, 34);
           border-radius: 30px;
