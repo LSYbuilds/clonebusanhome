@@ -249,6 +249,17 @@ const MainHeader = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      <AnimatePresence>
+        {hover && (
+          <motion.div
+            className="header_hover_bg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            style={{ overflow: "hidden" }}
+          ></motion.div>
+        )}
+      </AnimatePresence>
     </HeaderWrap>
   );
 };

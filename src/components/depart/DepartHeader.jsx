@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { DeaprtHeaderWrap } from "../../style/departStyle/DeaprtHeader_styled";
 import Icon from "../common/SvgComponents";
 
 // 헤더는 이너 1500px
-const [bMenu, setBMenu] = useState(false);
 const DepartHeader = () => {
+  const [bMenu, setBMenu] = useState(flase);
+  const [thisMenu, setThisMenu] = useState(0);
   const MoverOver = [
     {
       id: 1,
@@ -81,18 +83,17 @@ const DepartHeader = () => {
         </div>
         <nav className="nav_warp">
           <ul className="nav_list">
-            <li>
-              <Link>부산에가면</Link>
-            </li>
-            <li>
-              <Link>추천여행</Link>
-            </li>
-            <li>
-              <Link>여행준비</Link>
-            </li>
-            <li>
-              <Link>유용한정보</Link>
-            </li>
+            {MoverOver.map((item) => (
+              <li
+                key={item.id}
+                onHoverStart={() => {
+                  setBMenu(true);
+                  setThisMenu(item.id);
+                }}
+              >
+                <Link>{item.title}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className="other_menu">
@@ -102,7 +103,14 @@ const DepartHeader = () => {
           </div>
           <div className="login_box"></div>
         </div>
-        <div className="bottom_nav"></div>
+        <div className="bottom_nav">
+          {bottoMenuSet.map((item, idx) => (
+            <div key={idx}>
+              <div className="bnav_title">{item.title}</div>
+              <div className="bnav_list"></div>
+            </div>
+          ))}
+        </div>
       </div>
     </DeaprtHeaderWrap>
   );

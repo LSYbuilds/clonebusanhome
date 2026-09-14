@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import {
   MainWrap,
   GuideSection,
@@ -31,6 +32,19 @@ import noticeData from "../../assets/data/notice.json";
 import { img, p } from "framer-motion/client";
 const MainPage = () => {
   const [hoveredId, setHoveredId] = useState(null);
+  const controls = useAnimation();
+  const handleViewPortEnter = () => {
+    controls.start({
+      opacity: 1,
+      y: 0,
+    });
+  };
+  const handleViewPortLeave = () => {
+    controls.start({
+      opacity: 0,
+      y: 50,
+    });
+  };
   const slidedata = [
     {
       id: "1",
@@ -321,77 +335,128 @@ const MainPage = () => {
           </div>
 
           <div className="gra_card_wrap">
-            <div className="card_item date">
-              <Link to="#">
-                <Icon.calendar className="calender_icon" />
-                <div className="title_box">
-                  <p className="card_title">통합예약</p>
-                  <div className="text">
-                    <p>간편하게 예약하세요</p>
-                    <p>강좌/교육,견학/체험,대관/대여</p>
+            <motion.div
+              className="card_item"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+            >
+              <div className="card_bg"></div>
+              <div className="card_inset date">
+                <Link to="#">
+                  <Icon.calendar className="calender_icon" />
+                  <div className="title_box">
+                    <p className="card_title">통합예약</p>
+                    <div className="text">
+                      <p>간편하게 예약하세요</p>
+                      <p>강좌/교육,견학/체험,대관/대여</p>
+                    </div>
                   </div>
-                </div>
-                <div className="icon_box">
-                  <Icon.arrowHalf className="arrowhalf_icon" />
-                </div>
-              </Link>
-            </div>
-            <div className="card_item cul">
-              <p className="card_title">문화</p>
-              <ul className="cul_list">
-                <li>
-                  <Link to="#">부산문화포털 다봄</Link>
-                </li>
-                <li>
-                  <Link to="#">부산콘서트홀</Link>
-                </li>
-                <li>
-                  <Link to="#">부산미래유산</Link>
-                </li>
-                <li>
-                  <Link to="#">파란수도부산</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="card_item tour">
-              <div className="card_title_box">
-                <p className="card_title">관광</p>
-                <span className="card_btn">부산관광통계+</span>
+                  <div className="icon_box">
+                    <Icon.arrowHalf className="arrowhalf_icon" />
+                  </div>
+                </Link>
               </div>
-              <ul className="card_list">
-                <li>
-                  <Link to="#">{/* BGI 부산의 맛 */}</Link>
-                </li>
-                <li>
-                  <Link to="#">{/* BGI VISIT BUSAN */}</Link>
-                </li>
-                <li>
-                  <Link to="#">{/* BGI 부산갈맷길 */}</Link>
-                </li>
-                <li>
-                  <Link to="#">{/* BGI 메디컬 부산 */}</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="card_item mayor">
-              <p className="card_title">
-                <span>부산광역시장</span>
-                <span className="name">전재수</span>
-              </p>
-              <div className="card_list_box">
-                <ul className="card_list">
+            </motion.div>
+            <motion.div
+              className="card_item"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{
+                delay: 0.3,
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+            >
+              <div className="card_bg"></div>
+              <div className="card_inset cul">
+                <p className="card_title">문화</p>
+                <ul className="cul_list">
                   <li>
-                    <Link to="#">정책제안+</Link>
+                    <Link to="#">부산문화포털 다봄</Link>
                   </li>
                   <li>
-                    <Link to="#">일정+</Link>
+                    <Link to="#">부산콘서트홀</Link>
                   </li>
                   <li>
-                    <Link to="#">취임사+</Link>
+                    <Link to="#">부산미래유산</Link>
+                  </li>
+                  <li>
+                    <Link to="#">파란수도부산</Link>
                   </li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
+            <motion.div
+              className="card_item tour"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{
+                delay: 0.2,
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+            >
+              <div className="card_bg"></div>
+              <div className="card_inset tour">
+                <div className="card_title_box">
+                  <p className="card_title">관광</p>
+                  <span className="card_btn">부산관광통계+</span>
+                </div>
+                <ul className="card_list">
+                  <li>
+                    <Link to="#">{/* BGI 부산의 맛 */}</Link>
+                  </li>
+                  <li>
+                    <Link to="#">{/* BGI VISIT BUSAN */}</Link>
+                  </li>
+                  <li>
+                    <Link to="#">{/* BGI 부산갈맷길 */}</Link>
+                  </li>
+                  <li>
+                    <Link to="#">{/* BGI 메디컬 부산 */}</Link>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+            <motion.div
+              className="card_item mayor"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{
+                delay: 0.1,
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+            >
+              <div className="card_bg"></div>
+              <div className="card_inset mayor">
+                <p className="card_title">
+                  <span>부산광역시장</span>
+                  <span className="name">전재수</span>
+                </p>
+                <div className="card_list_box">
+                  <ul className="card_list">
+                    <li>
+                      <Link to="#">정책제안+</Link>
+                    </li>
+                    <li>
+                      <Link to="#">일정+</Link>
+                    </li>
+                    <li>
+                      <Link to="#">취임사+</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
           </div>
           <div className="service_slide">
             {/* 이거 1260px */}
@@ -420,7 +485,16 @@ const MainPage = () => {
               <span className="sub_title">공지사항</span>
               <span className="more_btn">go +</span>
             </div>
-            <div className="notice_list">
+            <motion.div
+              className="notice_list"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+            >
               <NoticeSwiper slidesPerView={3} spaceBetween={50}>
                 {NoticeData.map((item) => (
                   <SwiperSlide key={item.id}>
@@ -430,7 +504,7 @@ const MainPage = () => {
                   </SwiperSlide>
                 ))}
               </NoticeSwiper>
-            </div>
+            </motion.div>
             <div className="inform_list">
               <div className="inform_item">
                 <div className="sub_title_box">
@@ -492,87 +566,108 @@ const MainPage = () => {
                 })}
               </ul>
             </div>
-            <div className="news_scrap">
+            <motion.div
+              className="news_scrap"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+            >
               <div className="news_list">
                 <div className="news_item">
-                  <Link to="#" className="news_in">
-                    <div className="item_info">
-                      <p className="info_title">
-                        <span>보도</span>
-                        <span>자료</span>
-                      </p>
-                      <p className="info_text">
-                        부산시, 중국 베이징에서 마이스 시장 공략을 위한
-                        "로드쇼(유치설명회" 개최
-                      </p>
-                    </div>
-                    <div className="news_img">
-                      <img
-                        src="https://www.busan.go.kr/imgBBSTY3/20260824/082407B5416864-ac2d52755d654d3291d4539f3a914d16.png"
-                        alt="카드이미지"
-                      />
-                    </div>
-                  </Link>
+                  <div className="news_inset">
+                    <div className="news_inset_bg"></div>
+                    <Link to="#" className="news_in">
+                      <div className="item_info">
+                        <p className="info_title">
+                          <span>보도</span>
+                          <span>자료</span>
+                        </p>
+                        <p className="info_text">
+                          부산시, 중국 베이징에서 마이스 시장 공략을 위한
+                          "로드쇼(유치설명회" 개최
+                        </p>
+                      </div>
+                      <div className="news_img">
+                        <img
+                          src="https://www.busan.go.kr/imgBBSTY3/20260824/082407B5416864-ac2d52755d654d3291d4539f3a914d16.png"
+                          alt="카드이미지"
+                        />
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="news_item">
-                  <Link to="#" className="news_in">
-                    <div className="item_info">
-                      <p className="info_title">
-                        <span>부산</span>
-                        <span>시보</span>
-                      </p>
-                      <p className="info_text">
-                        이 열차는 '행복행 열차' 입니다, 열차가 곧 출발합니다.
-                      </p>
-                    </div>
-                    <div className="news_img">
-                      <img
-                        src="https://www.busan.go.kr/imgARTICLE/20260814/081416B0419452-add551ce385f4a988eb1b1e71785e273.jpg"
-                        alt="카드이미지"
-                      />
-                    </div>
-                  </Link>
+                  <div className="news_inset">
+                    <div className="news_inset_bg"></div>
+                    <Link to="#" className="news_in">
+                      <div className="item_info">
+                        <p className="info_title">
+                          <span>부산</span>
+                          <span>시보</span>
+                        </p>
+                        <p className="info_text">
+                          이 열차는 '행복행 열차' 입니다, 열차가 곧 출발합니다.
+                        </p>
+                      </div>
+                      <div className="news_img">
+                        <img
+                          src="https://www.busan.go.kr/imgARTICLE/20260814/081416B0419452-add551ce385f4a988eb1b1e71785e273.jpg"
+                          alt="카드이미지"
+                        />
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="news_item">
-                  <Link to="#" className="news_in">
-                    <div className="item_info">
-                      <p className="info_title">
-                        <span>블로그</span>
-                      </p>
-                      <p className="info_text">
-                        부산보건환경연구원 연구과제 공모 | 시민의 일상 속
-                        아이디어가 건강한 부산을 만듭니다
-                      </p>
-                    </div>
-                    <div className="news_img">
-                      <img
-                        src="https://www.busan.go.kr/snsimg/naver/224385526284.png"
-                        alt="카드이미지"
-                      />
-                    </div>
-                  </Link>
+                  <div className="news_inset">
+                    <div className="news_inset_bg"></div>
+                    <Link to="#" className="news_in">
+                      <div className="item_info">
+                        <p className="info_title">
+                          <span>블로그</span>
+                        </p>
+                        <p className="info_text">
+                          부산보건환경연구원 연구과제 공모 | 시민의 일상 속
+                          아이디어가 건강한 부산을 만듭니다
+                        </p>
+                      </div>
+                      <div className="news_img">
+                        <img
+                          src="https://www.busan.go.kr/snsimg/naver/224385526284.png"
+                          alt="카드이미지"
+                        />
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="news_item">
-                  <Link to="#" className="news_in">
-                    <div className="item_info">
-                      <p className="info_title">
-                        <span>부산튜브</span>
-                      </p>
-                      <p className="info_text">
-                        부산시, 중국 베이징에서 마이스 시장 공략을 위한
-                        "로드쇼(유치설명회" 개최
-                      </p>
-                    </div>
-                    <div className="news_img">
-                      <img
-                        src="https://i.ytimg.com/vi/hy84z7NaWmU/sddefault.jpg"
-                        alt="카드이미지"
-                      ></img>
-                    </div>
-                  </Link>
+                  <div className="news_inset">
+                    <div className="news_inset_bg"></div>
+                    <Link to="#" className="news_in">
+                      <div className="item_info">
+                        <p className="info_title">
+                          <span>부산튜브</span>
+                        </p>
+                        <p className="info_text">
+                          부산시, 중국 베이징에서 마이스 시장 공략을 위한
+                          "로드쇼(유치설명회" 개최
+                        </p>
+                      </div>
+                      <div className="news_img">
+                        <img
+                          src="https://i.ytimg.com/vi/hy84z7NaWmU/sddefault.jpg"
+                          alt="카드이미지"
+                        ></img>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </CommuSection>
         {/* 배너영역 */}

@@ -10,6 +10,7 @@ export const HeaderWrap = styled.div`
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
   transition: all 0.2s ease-in-out;
   background-color: ${(props) =>
     props.scrolled || props.hover ? "#fff" : "none"};
@@ -159,6 +160,7 @@ export const HeaderWrap = styled.div`
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            cursor: pointer;
             span {
               display: block;
               width: 100%;
@@ -179,6 +181,7 @@ export const HeaderWrap = styled.div`
     top: 100%;
     left: 0px;
     width: 100%;
+    z-index: 998;
     background-color: #fff;
     border-top: 1px solid #ddd;
     .lnb_i {
@@ -233,5 +236,14 @@ export const HeaderWrap = styled.div`
         }
       }
     }
+  }
+  .header_hover_bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 990;
+    top: 100%;
+    left: 0px;
+    background-color: rgb(0, 0, 0, 0.7);
   }
 `;
