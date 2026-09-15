@@ -1,0 +1,1829 @@
+{
+  "headermenus": [
+    {
+      "id": "1",
+      "title": "부산민원120",
+      "url": "https://www.busan.go.kr/minwon/index",
+      "children": [
+        {
+          "title": "민원신청",
+          "url": "https://www.busan.go.kr/minwon/minwon02",
+          "children": [
+            {
+              "title": "통합민원신청",
+              "url": "https://www.busan.go.kr/minwon/minwon02"
+            },
+            {
+              "title": "부산민원120 이용안내",
+              "url": "https://www.busan.go.kr/minwon/Information"
+            },
+            {
+              "title": "버스의견진술",
+              "url": "https://www.busan.go.kr/minwon/minwon1001"
+            },
+            {
+              "title": "신고센터",
+              "url": "https://www.busan.go.kr/minwon/guide"
+            },
+            {
+              "title": "스마트 현장사진신고",
+              "url": "https://www.busan.go.kr/minwon/photo-report"
+            },
+            {
+              "title": "여권안내",
+              "url": "http://www.busan.go.kr/minwon/passport"
+            },
+            {
+              "title": "정부24",
+              "url": "http://www.gov.kr/portal/main"
+            },
+            {
+              "title": "공익제보센터",
+              "url": "https://www.busan.go.kr/bshotline"
+            }
+          ]
+        },
+        {
+          "title": "제안신청",
+          "url": "http://www.busan.go.kr/minwon/propse",
+          "children": [
+            {
+              "title": "일반제안",
+              "url": "https://www.busan.go.kr/minwon/proguide"
+            },
+            {
+              "title": "나의 제안",
+              "url": "https://www.busan.go.kr/minwon/mysuggestion"
+            }
+          ]
+        },
+        {
+          "title": "시민참여",
+          "url": "https://www.busan.go.kr/minwon/survey",
+          "children": [
+            {
+              "title": "설문조사",
+              "url": "https://www.busan.go.kr/minwon/survey"
+            },
+            {
+              "title": "나눔장터",
+              "url": "https://www.busan.go.kr/minwon/nanum"
+            },
+            {
+              "title": "국민생각함",
+              "url": "https://www.busan.go.kr/minwon/thinkbox001"
+            },
+            {
+              "title": "모니터",
+              "url": "https://www.busan.go.kr/minwon/chmonitor"
+            },
+            {
+              "title": "이벤트 통합안내",
+              "url": "https://www.busan.go.kr/minwon/eventresult"
+            },
+            {
+              "title": "행사/모집 신청",
+              "url": "https://www.busan.go.kr/minwon/occation"
+            },
+            {
+              "title": "시민게시판",
+              "url": "https://www.busan.go.kr/minwon/citizenboard01"
+            },
+            {
+              "title": "주민참여예산",
+              "url": "http://www.busan.go.kr/yesan/index"
+            },
+            {
+              "title": "민생규제혁신과제",
+              "url": "https://www.busan.go.kr/minwon/gujeideaoffer01"
+            },
+            {
+              "title": "찾아가는 현장규제신고센터",
+              "url": "https://www.busan.go.kr/minwon/gujereportcenter"
+            },
+            {
+              "title": "시민열린마루",
+              "url": "https://www.busan.go.kr/siminopen"
+            },
+            {
+              "title": "협치부산",
+              "url": "http://www.busan.go.kr/gnance/index"
+            }
+          ]
+        },
+        {
+          "title": "민원안내",
+          "url": "https://www.busan.go.kr/minwon/manual",
+          "children": [
+            {
+              "title": "민원편람",
+              "url": "https://www.busan.go.kr/minwon/manual"
+            },
+            {
+              "title": "민원목록",
+              "url": "https://www.busan.go.kr/minwon/manual2"
+            },
+            {
+              "title": "민원처리 확인",
+              "url": "http://www.busan.go.kr/minwon/minwonopen/"
+            },
+            {
+              "title": "편리한 민원서비스",
+              "url": "http://www.busan.go.kr/minwon/info0202"
+            },
+            {
+              "title": "민원정보",
+              "url": "http://www.busan.go.kr/minwon/info0301"
+            },
+            {
+              "title": "민원시책",
+              "url": "http://www.busan.go.kr/minwon/mwpolicy01"
+            },
+            {
+              "title": "행정서비스헌장",
+              "url": "http://www.busan.go.kr/minwon/charter"
+            }
+          ]
+        },
+        {
+          "title": "120콜센터",
+          "url": "https://www.busan.go.kr/minwon/manual120",
+          "children": [
+            {
+              "title": "이용안내",
+              "url": "http://www.busan.go.kr/minwon/callguide01"
+            },
+            {
+              "title": "콜센터 소개",
+              "url": "http://www.busan.go.kr/minwon/callinfo02"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "부산소식",
+      "url": "/nbnews",
+      "children": [
+        {
+          "title": "새소식",
+          "url": "/nbnews",
+          "children": [
+            {
+              "title": "통합 공지사항",
+              "url": "/nbnews"
+            },
+            {
+              "title": "홍보게시판",
+              "url": "/promoboard"
+            },
+            {
+              "title": "시정영상뉴스",
+              "url": "http://badatv.busan.go.kr/view.do?no=161"
+            },
+            {
+              "title": "전자책",
+              "url": "http://book.busan.go.kr"
+            },
+            {
+              "title": "공공앱",
+              "url": "/bhmobile01"
+            },
+            {
+              "title": "문자알림서비스",
+              "url": "/sms-service"
+            }
+          ]
+        },
+        {
+          "title": "부산시보",
+          "url": "https://www.busan.go.kr/news/index"
+        },
+        {
+          "title": "보도 · 해명자료",
+          "url": "/nbtnewsBU",
+          "children": [
+            {
+              "title": "보도자료",
+              "url": "/nbtnewsBU"
+            },
+            {
+              "title": "해명ㆍ설명자료",
+              "url": "/nbanser"
+            }
+          ]
+        },
+        {
+          "title": "공고",
+          "url": "/nbincruit",
+          "children": [
+            {
+              "title": "채용공고",
+              "url": "/nbincruit"
+            },
+            {
+              "title": "공무원 시험공고",
+              "url": "https://www.busan.go.kr/depart/jobexam01"
+            },
+            {
+              "title": "입찰공고",
+              "url": "/nbbid"
+            },
+            {
+              "title": "부산시보 고시공고",
+              "url": "http://www.busan.go.kr/news/gosiboard?articlNo=2"
+            },
+            {
+              "title": "고시공고",
+              "url": "/nbgosi"
+            },
+            {
+              "title": "입법예고",
+              "url": "/igosi?conGosiGbn=P"
+            },
+            {
+              "title": "분묘개장공고",
+              "url": "/nbtomb"
+            }
+          ]
+        },
+        {
+          "title": "부산시 공식SNS",
+          "url": "/mediabusan"
+        },
+        {
+          "title": "SNS 모아보기",
+          "url": "https://www.busan.go.kr/allsns"
+        },
+        {
+          "title": "시정사진",
+          "url": "/photobodo",
+          "children": [
+            {
+              "title": "보도자료 사진",
+              "url": "/photobodo"
+            },
+            {
+              "title": "시정홍보 사진",
+              "url": "/promophoto"
+            },
+            {
+              "title": "부산관광사진",
+              "url": "https://archive.visitbusan.net/index.nm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "정보공개",
+      "url": "/govrnment",
+      "children": [
+        {
+          "title": "주요시책",
+          "url": "/gbplan",
+          "children": [
+            {
+              "title": "민생100일 비상조치",
+              "url": "https://www.busan.go.kr/minsaeng100"
+            },
+            {
+              "title": "주요업무계획",
+              "url": "/gbplan"
+            },
+            {
+              "title": "핵심정책",
+              "url": "/tourism03",
+              "children": [
+                {
+                  "title": "가덕도신공항",
+                  "url": "https://www.busan.go.kr/newairport "
+                },
+                {
+                  "title": "15분 도시 부산",
+                  "url": "https://www.busan.go.kr/15minute/index"
+                },
+                {
+                  "title": "부산경남 행정통합",
+                  "url": "https://www.busan.go.kr/bgi/index"
+                },
+                {
+                  "title": "부울경 초광역 경제동맹",
+                  "url": "/megacity0302"
+                },
+                {
+                  "title": "부산항(북항) 재개발",
+                  "url": "/ghbusan",
+                  "children": [
+                    {
+                      "title": "1단계 사업 개요",
+                      "url": "/ghbusan"
+                    },
+                    {
+                      "title": "1단계 사업 방향",
+                      "url": "/ghbusan02"
+                    },
+                    {
+                      "title": "2단계 사업 개요",
+                      "url": "/ghbusan03"
+                    }
+                  ]
+                },
+                {
+                  "title": "국립치의학연구원 부산 유치",
+                  "url": "https://www.busan.go.kr/k-dental"
+                },
+                {
+                  "title": "부산 독립운동기념관",
+                  "url": "https://www.busan.go.kr/bsindepen"
+                }
+              ]
+            },
+            {
+              "title": "2025년 주요성과",
+              "url": "/2022result"
+            },
+            {
+              "title": "2026년 달라지는 제도/시책",
+              "url": "/ghbplan2025"
+            },
+            {
+              "title": "인구정책 브리핑",
+              "url": "/briefing"
+            }
+          ]
+        },
+        {
+          "title": "정보공개",
+          "url": "/ghopen",
+          "children": [
+            {
+              "title": "정보공개제도",
+              "url": "/ghopen",
+              "children": [
+                {
+                  "title": "업무처리절차",
+                  "url": "/ghopen"
+                },
+                {
+                  "title": "정보공개방법",
+                  "url": "/ghopen01"
+                },
+                {
+                  "title": "부산광역시 비공개 대상정보 세부기준 (2026년 8월 기준)",
+                  "url": "/ghopen02"
+                },
+                {
+                  "title": "불복구제절차",
+                  "url": "/ghopen03"
+                },
+                {
+                  "title": "정보공개 수수료 안내",
+                  "url": "/ghopen04"
+                },
+                {
+                  "title": "정보공개접수 창구",
+                  "url": "/ghopen05"
+                },
+                {
+                  "title": "정보공개 운영 매뉴얼",
+                  "url": "/ghopen06"
+                }
+              ]
+            },
+            {
+              "title": "결재문서",
+              "url": "/ghopen07-1",
+              "children": [
+                {
+                  "title": "정보(문서)목록",
+                  "url": "/ghopen07-1",
+                  "children": [
+                    {
+                      "title": "2014년 3월 이후 정보목록",
+                      "url": "/ghopen07-1"
+                    },
+                    {
+                      "title": "2014년 2월 이전 정보목록",
+                      "url": "/ghopen07-3"
+                    }
+                  ]
+                },
+                {
+                  "title": "원문정보",
+                  "url": "/ghopen07-4"
+                }
+              ]
+            },
+            {
+              "title": "정보공개 청구",
+              "url": "https://www.open.go.kr/com/login/memberLogin.do "
+            },
+            {
+              "title": "사전정보공표",
+              "url": "/ghopen09"
+            },
+            {
+              "title": "이 달의 정보공개",
+              "url": "/ghopen18"
+            },
+            {
+              "title": "의회행정사무감사자료",
+              "url": "/abinspection"
+            },
+            {
+              "title": "공유재산 및 물품",
+              "url": "/ghopen20",
+              "children": [
+                {
+                  "title": "물품 안내",
+                  "url": "/ghopen19"
+                },
+                {
+                  "title": "공유재산 안내",
+                  "url": "/ghopen20"
+                },
+                {
+                  "title": "일반재산공개",
+                  "url": "/shareppt02"
+                },
+                {
+                  "title": "행정재산공개",
+                  "url": "/shareppt0703"
+                },
+                {
+                  "title": "영조물배상공제 현황",
+                  "url": "/ghopen16"
+                }
+              ]
+            },
+            {
+              "title": "용역보고서",
+              "url": "/prism",
+              "children": [
+                {
+                  "title": "정책연구용역 보고서",
+                  "url": "/prism"
+                },
+                {
+                  "title": "BDI 현안연구과제 보고서",
+                  "url": "https://bdi.re.kr/www/reschrpt/10/K1031 "
+                },
+                {
+                  "title": "건설기술용역 심의자료",
+                  "url": "https://cone.busan.go.kr/DelibrSearch.do?pageid=&"
+                },
+                {
+                  "title": "한국지방행정연구원 정책보고서",
+                  "url": "https://krila.re.kr/report/policy_form.php?idx=1896&&completion=yes&keyword=%EA%B8%80%EB%A1%9C%EB%B2%8C&list_type=list&page=1&list_type=list"
+                },
+                {
+                  "title": "한국지방행정연구원 정책이슈리포트",
+                  "url": "https://krila.re.kr/report/issue_form.php?idx=1999&&completion=yes&keyword=%EB%B6%81%EA%B7%B9%ED%95%AD%EB%A1%9C&list_type=list&page=1&list_type=list"
+                }
+              ]
+            },
+            {
+              "title": "정책실명제",
+              "url": "/policy01",
+              "children": [
+                {
+                  "title": "중점관리 대상사업 목록",
+                  "url": "/policy01"
+                },
+                {
+                  "title": "국민신청실명제",
+                  "url": "/policy02"
+                }
+              ]
+            },
+            {
+              "title": "참여정책사전공시",
+              "url": "/preannouncement"
+            },
+            {
+              "title": "인사통계/조직정보",
+              "url": "/hrmanage",
+              "children": [
+                {
+                  "title": "인사운영 통계",
+                  "url": "/hrmanage"
+                },
+                {
+                  "title": "자치단체 조직운영 핵심지표(6개) 공개",
+                  "url": "/cityhallgroup"
+                },
+                {
+                  "title": "본청",
+                  "url": "/citypublic01",
+                  "children": [
+                    {
+                      "title": "실국본부 설치 수",
+                      "url": "/citypublic06"
+                    }
+                  ]
+                },
+                {
+                  "title": "구 · 군",
+                  "url": "/gugunpublic01",
+                  "children": [
+                    {
+                      "title": "실국본부 설치 수",
+                      "url": "/gugunpublic06"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "마을세무사",
+              "url": "/ghopen17?bbsNo=10"
+            },
+            {
+              "title": "공공시설건립비용",
+              "url": "/publicfacilities"
+            },
+            {
+              "title": "청사 신축비용",
+              "url": "/newbuildexp"
+            },
+            {
+              "title": "Big-데이터웨이브(공공데이터)",
+              "url": "https://data.busan.go.kr/bdip/"
+            },
+            {
+              "title": "시민여론조사",
+              "url": "/opinion"
+            },
+            {
+              "title": "위원회 운영정보",
+              "url": "/ghopen10"
+            },
+            {
+              "title": "물가정보",
+              "url": "/depart/abnecessity01?isMart=true"
+            },
+            {
+              "title": "업무추진비",
+              "url": "/ghopen12"
+            },
+            {
+              "title": "먹는물영업자 위반현황",
+              "url": "/violation01",
+              "children": [
+                {
+                  "title": "행정처분",
+                  "url": "/violation01"
+                },
+                {
+                  "title": "회수폐기",
+                  "url": "/violation02"
+                },
+                {
+                  "title": "사업장폐쇄",
+                  "url": "/violation03"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "예산",
+          "url": "/ghstat",
+          "children": [
+            {
+              "title": "세입세출예산서",
+              "url": "/ghstat"
+            },
+            {
+              "title": "기금운용계획",
+              "url": "/ghfund"
+            },
+            {
+              "title": "재정공시",
+              "url": "/budget",
+              "children": [
+                {
+                  "title": "예산기준",
+                  "url": "/ghstat2026",
+                  "children": [
+                    {
+                      "title": "2026년 예산기준",
+                      "url": "/ghstat202601"
+                    },
+                    {
+                      "title": "2025년 예산기준",
+                      "url": "/ghstat202501"
+                    },
+                    {
+                      "title": "2024년 예산기준",
+                      "url": "/ghstat202401"
+                    },
+                    {
+                      "title": "2023년 예산기준",
+                      "url": "/ghstat202301"
+                    },
+                    {
+                      "title": "2022년 예산기준",
+                      "url": "/ghstat202201"
+                    },
+                    {
+                      "title": "2021년 예산기준",
+                      "url": "/ghstat202101"
+                    },
+                    {
+                      "title": "2020년 예산기준",
+                      "url": "/ghstat202001"
+                    },
+                    {
+                      "title": "2019년 예산기준",
+                      "url": "/ghstat201901"
+                    },
+                    {
+                      "title": "2018년 예산기준",
+                      "url": "/ghstat201801"
+                    },
+                    {
+                      "title": "2017년 예산기준",
+                      "url": "/ghstat201701"
+                    },
+                    {
+                      "title": "2016년 예산기준",
+                      "url": "/ghstat001"
+                    },
+                    {
+                      "title": "2015년 예산기준",
+                      "url": "/ghstat010"
+                    }
+                  ]
+                },
+                {
+                  "title": "결산기준",
+                  "url": "/ghclos2026",
+                  "children": [
+                    {
+                      "title": "2025년 결산기준",
+                      "url": "/ghclos202600"
+                    },
+                    {
+                      "title": "2024년 결산기준",
+                      "url": "/ghclos202500"
+                    },
+                    {
+                      "title": "2023년 결산기준",
+                      "url": "/ghclos202400"
+                    },
+                    {
+                      "title": "2022년 결산기준",
+                      "url": "/ghclos202300"
+                    },
+                    {
+                      "title": "2021년 결산기준",
+                      "url": "/ghclos202201"
+                    },
+                    {
+                      "title": "2020년 결산기준",
+                      "url": "/ghclos202101"
+                    },
+                    {
+                      "title": "2019년 결산기준",
+                      "url": "/ghclos202001"
+                    },
+                    {
+                      "title": "2018년 결산기준",
+                      "url": "/ghclos201901"
+                    },
+                    {
+                      "title": "2017년 결산기준",
+                      "url": "/ghclos201801"
+                    },
+                    {
+                      "title": "2016년 결산기준",
+                      "url": "/ghstat02017"
+                    },
+                    {
+                      "title": "2015년 결산기준",
+                      "url": "/ghstat020"
+                    },
+                    {
+                      "title": "2014년 결산기준",
+                      "url": "/ghstat040"
+                    },
+                    {
+                      "title": "2013년 결산기준",
+                      "url": "/ghstat060"
+                    }
+                  ]
+                },
+                {
+                  "title": "재정공시(2013년 이전)",
+                  "url": "/ghstat2013"
+                },
+                {
+                  "title": "재정공시 관련용어",
+                  "url": "/ghstat03?termSe=4"
+                },
+                {
+                  "title": "재정공시 의견제출",
+                  "url": "/ghstat04"
+                }
+              ]
+            },
+            {
+              "title": "세입세출 운용",
+              "url": "/budgetmngstatus",
+              "children": [
+                {
+                  "title": "총괄현황",
+                  "url": "/budgetmngstatus"
+                },
+                {
+                  "title": "세입현황",
+                  "url": "/revstatus"
+                },
+                {
+                  "title": "세출현황",
+                  "url": "/budgetexecstatus",
+                  "children": [
+                    {
+                      "title": "예산집행현황",
+                      "url": "/budgetexecstatus"
+                    },
+                    {
+                      "title": "세부사업별 지출내역",
+                      "url": "/expdetail"
+                    },
+                    {
+                      "title": "지출건별 내역",
+                      "url": "/expstatus"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "신고 및 조회",
+              "url": "/ghstat06",
+              "children": [
+                {
+                  "title": "예산절감신고",
+                  "url": "/ghstat06"
+                },
+                {
+                  "title": "예산낭비신고",
+                  "url": "/ghstat07"
+                }
+              ]
+            },
+            {
+              "title": "예산절감(낭비)사례",
+              "url": "/ghstat09"
+            },
+            {
+              "title": "보조금 내역 공개",
+              "url": "/ghstat10"
+            },
+            {
+              "title": "민간위탁",
+              "url": "/ghstat12"
+            },
+            {
+              "title": "공공기관 위탁 · 대행",
+              "url": "/ghstat13"
+            },
+            {
+              "title": "공공기관 정산",
+              "url": "/ghstat14"
+            },
+            {
+              "title": "지방재정365",
+              "url": "https://www.lofin365.go.kr"
+            }
+          ]
+        },
+        {
+          "title": "결산서",
+          "url": "/finalaccount"
+        },
+        {
+          "title": "감사정보",
+          "url": "/gbinspec",
+          "children": [
+            {
+              "title": "감사실시 안내",
+              "url": "/gbinspec"
+            },
+            {
+              "title": "감사실시 결과",
+              "url": "/gbinspec02"
+            },
+            {
+              "title": "감사반복 지적사례",
+              "url": "/gbinspec01"
+            },
+            {
+              "title": "사전 컨설팅감사",
+              "url": "/ghinspec002",
+              "children": [
+                {
+                  "title": "사전 컨설팅감사 안내",
+                  "url": "/ghinspec002"
+                },
+                {
+                  "title": "사전 컨설팅감사 사례",
+                  "url": "/ghinspec02"
+                }
+              ]
+            },
+            {
+              "title": "적극행정 면책",
+              "url": "/ghinspec01"
+            },
+            {
+              "title": "주민감사청구",
+              "url": "/ghinspec03"
+            },
+            {
+              "title": "공직윤리제도",
+              "url": "/ghinspec0801",
+              "children": [
+                {
+                  "title": "공직자 재산등록 · 공개 · 심사제도",
+                  "url": "/ghinspec0801"
+                },
+                {
+                  "title": "선물신고제도 · 주식백지신탁심사제도",
+                  "url": "/ghinspec0802"
+                },
+                {
+                  "title": "퇴직공직자 취업 · 행위제한 제도",
+                  "url": "/ghinspec0803"
+                },
+                {
+                  "title": "퇴직공직자 취업심사 및 취업이력",
+                  "url": "/ghinspec0804"
+                }
+              ]
+            },
+            {
+              "title": "청렴게시판",
+              "url": "/ghinspec06"
+            },
+            {
+              "title": "부패공직자 제재현황",
+              "url": "/ghinspec04"
+            },
+            {
+              "title": "청렴해요 부산",
+              "url": "/ghinspec"
+            },
+            {
+              "title": "청렴도 자가진단",
+              "url": "/ghselfcheck"
+            },
+            {
+              "title": "시민 감사요망사항 의견접수",
+              "url": "/ghinspec07"
+            },
+            {
+              "title": "채용 비리 신고",
+              "url": "https://www.clean.go.kr/menu.es?mid=a10202000000"
+            },
+            {
+              "title": "공공기관 청렴포털 신고하기",
+              "url": "https://ncp.clean.go.kr/cmn/secCtfcKMC.do?menuCode=acs&mapAcs=Y&insttCd=6260000"
+            },
+            {
+              "title": "시민고충처리위원회",
+              "url": "/citizengrievance01",
+              "children": [
+                {
+                  "title": "시민고충처리위원회 소개",
+                  "url": "/citizengrievance01"
+                },
+                {
+                  "title": "시민고충처리위원회 운영",
+                  "url": "/citizengrievance02"
+                },
+                {
+                  "title": "시민고충처리위원회 소식",
+                  "url": "/citizengrievance03"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "지방공기업",
+          "url": "/gpreport",
+          "children": [
+            {
+              "title": "지방공기업이란",
+              "url": "http://www.cleaneye.go.kr/siteGuide/pubCompGuide.do"
+            },
+            {
+              "title": "지방공기업 현황",
+              "url": "http://www.cleaneye.go.kr/siteGuide/pubCompStatus.do"
+            },
+            {
+              "title": "지방공기업 경영정보",
+              "url": "http://www.cleaneye.go.kr/user/itemGongsi.do"
+            },
+            {
+              "title": "지방공기업 성별 임금공시",
+              "url": "/gpreport"
+            }
+          ]
+        },
+        {
+          "title": "계약정보",
+          "url": "https://www.busan.go.kr/depart/abcontract?schCtrtkindcd=1",
+          "children": [
+            {
+              "title": "계약현황",
+              "url": "https://www.busan.go.kr/depart/abcontract?schCtrtkindcd=1"
+            },
+            {
+              "title": "수의계약현황",
+              "url": "http://www.busan.go.kr/depart/abpcontract01?schCtrtkindcd=1"
+            },
+            {
+              "title": "하도급현황",
+              "url": "http://www.busan.go.kr/depart/absubcontract"
+            },
+            {
+              "title": "대가지급",
+              "url": "http://www.busan.go.kr/depart/abpayment"
+            },
+            {
+              "title": "하수도공기업 계약정보",
+              "url": "/hasudoContract"
+            },
+            {
+              "title": "상수도사업본부 계약정보",
+              "url": "https://www.busan.go.kr/water/contract?ctr_gb=10 "
+            }
+          ]
+        },
+        {
+          "title": "홈페이지 아카이브",
+          "url": "/webarchive"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "부산소개",
+      "url": "/busanis",
+      "children": [
+        {
+          "title": "부산의 오늘",
+          "url": "/busanis",
+          "children": [
+            {
+              "title": "부산은?",
+              "url": "/busanis"
+            },
+            {
+              "title": "도시비전",
+              "url": "/bhgoals"
+            },
+            {
+              "title": "기본현황",
+              "url": "/bhbasisinfo"
+            },
+            {
+              "title": "행정구역/지도",
+              "url": "/bhaddis01",
+              "children": [
+                {
+                  "title": "행정구역",
+                  "url": "/bhjunggu",
+                  "children": [
+                    {
+                      "title": "중구",
+                      "url": "/bhjunggu"
+                    },
+                    {
+                      "title": "서구",
+                      "url": "/bhseogu"
+                    },
+                    {
+                      "title": "동구",
+                      "url": "/bhdonggu"
+                    },
+                    {
+                      "title": "영도구",
+                      "url": "/bhyeongdogu"
+                    },
+                    {
+                      "title": "부산진구",
+                      "url": "/bhbusanjingu"
+                    },
+                    {
+                      "title": "동래구",
+                      "url": "/bhdongnaegu"
+                    },
+                    {
+                      "title": "남구",
+                      "url": "/bhnamgu"
+                    },
+                    {
+                      "title": "북구",
+                      "url": "/bhbukgu"
+                    },
+                    {
+                      "title": "해운대구",
+                      "url": "/bhhaeundaegu"
+                    },
+                    {
+                      "title": "사하구",
+                      "url": "/bhsahagu"
+                    },
+                    {
+                      "title": "금정구",
+                      "url": "/bhgeumjeonggu"
+                    },
+                    {
+                      "title": "강서구",
+                      "url": "/bhgangseogu"
+                    },
+                    {
+                      "title": "연제구",
+                      "url": "/bhyeonjegu"
+                    },
+                    {
+                      "title": "수영구",
+                      "url": "/bhsuyeonggu"
+                    },
+                    {
+                      "title": "사상구",
+                      "url": "/bhsasanggu"
+                    },
+                    {
+                      "title": "기장군",
+                      "url": "/bhgijanggun"
+                    }
+                  ]
+                },
+                {
+                  "title": "행정 읍/면/동 현황",
+                  "url": "/bhaddis02"
+                },
+                {
+                  "title": "법정 동/리 현황",
+                  "url": "/bhaddis03"
+                },
+                {
+                  "title": "자치구 · 군 주소 및 전화번호",
+                  "url": "/bhaddis04"
+                },
+                {
+                  "title": "행정지도",
+                  "url": "https://data.busan.go.kr/bdip/statistics/csm/admGd.do"
+                }
+              ]
+            },
+            {
+              "title": "국제교류 및 자매도시",
+              "url": "/bhintexc02",
+              "children": [
+                {
+                  "title": "국제교류",
+                  "url": "/bhintexc02",
+                  "children": [
+                    {
+                      "title": "국제협력및정책",
+                      "url": "/bhintexc02"
+                    },
+                    {
+                      "title": "일반현황",
+                      "url": "/bhintexc03"
+                    }
+                  ]
+                },
+                {
+                  "title": "자매도시",
+                  "url": "/sistercity01",
+                  "children": [
+                    {
+                      "title": "자매도시 현황",
+                      "url": "/sistercity01"
+                    },
+                    {
+                      "title": "자매도시 소개",
+                      "url": "/kaohsiung"
+                    }
+                  ]
+                },
+                {
+                  "title": "우호협력도시",
+                  "url": "/bhsiscit0201",
+                  "children": [
+                    {
+                      "title": "우호협력도시 현황",
+                      "url": "/bhsiscit0201"
+                    },
+                    {
+                      "title": "우호협력도시 소개",
+                      "url": "/shenzhen"
+                    }
+                  ]
+                },
+                {
+                  "title": "국제교류홍보관",
+                  "url": "/exhibition"
+                },
+                {
+                  "title": "국제회의체",
+                  "url": "/bhintcon"
+                },
+                {
+                  "title": "국제교류 주요사업",
+                  "url": "/bhbusiness01"
+                },
+                {
+                  "title": "외국인학교 현황",
+                  "url": "/bhforsch01"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "부산의 상징",
+          "url": "/bhareasymbol",
+          "children": [
+            {
+              "title": "지역상징",
+              "url": "/bhareasymbol"
+            },
+            {
+              "title": "기관상징",
+              "url": "/bhorgsymbol01",
+              "children": [
+                {
+                  "title": "상징마크,마스코트",
+                  "url": "/bhorgsymbol01"
+                },
+                {
+                  "title": "브랜드 슬로건",
+                  "url": "/bhorgsymbol02"
+                }
+              ]
+            },
+            {
+              "title": "부산체",
+              "url": "/bhbusan"
+            },
+            {
+              "title": "부산시민헌장",
+              "url": "/bhcitizen02",
+              "children": [
+                {
+                  "title": "부산시민헌장",
+                  "url": "/bhcitizen02"
+                },
+                {
+                  "title": "이전 부산시민헌장",
+                  "url": "/bhcitizen01"
+                }
+              ]
+            },
+            {
+              "title": "부산찬가",
+              "url": "/bhsong"
+            },
+            {
+              "title": "부산시민의 날",
+              "url": "/bhdctizen"
+            }
+          ]
+        },
+        {
+          "title": "부산시청 안내",
+          "url": "/bhintro01",
+          "children": [
+            {
+              "title": "시청사 안내",
+              "url": "/bhintro01",
+              "children": [
+                {
+                  "title": "시청사 소개",
+                  "url": "/bhintro01"
+                },
+                {
+                  "title": "시청 찾아오시는 길",
+                  "url": "/bhintro02"
+                },
+                {
+                  "title": "주차장 안내",
+                  "url": "/bhintro03"
+                },
+                {
+                  "title": "부산시청 종합안내",
+                  "url": "/bhintro04"
+                }
+              ]
+            },
+            {
+              "title": "전화번호 안내",
+              "url": "/bhtelinfo01",
+              "children": [
+                {
+                  "title": "민원안내 전화",
+                  "url": "/bhtelinfo01"
+                },
+                {
+                  "title": "실 · 본부 · 국 전화",
+                  "url": "/bhtelinfo03"
+                },
+                {
+                  "title": "직속기관 · 사업소 전화",
+                  "url": "/bhtelinfo04"
+                },
+                {
+                  "title": "FAX 번호",
+                  "url": "/bhtelinfo05"
+                },
+                {
+                  "title": "행정전화번호부",
+                  "url": "/phone"
+                }
+              ]
+            },
+            {
+              "title": "조직도",
+              "url": "/bhorganization01",
+              "children": [
+                {
+                  "title": "조직도",
+                  "url": "/bhorganization01"
+                },
+                {
+                  "title": "기구/정원",
+                  "url": "/bhorganization03"
+                },
+                {
+                  "title": "실 · 본부 · 국",
+                  "url": "/bhorganization02",
+                  "children": [
+                    {
+                      "title": "실 · 본부 · 국 소개",
+                      "url": "/bhorganization02"
+                    },
+                    {
+                      "title": "업무/담당자",
+                      "url": "/bhinspec01"
+                    }
+                  ]
+                },
+                {
+                  "title": "직속기관 · 사업소 소개",
+                  "url": "/office"
+                },
+                {
+                  "title": "직원검색",
+                  "url": "/telephone"
+                }
+              ]
+            },
+            {
+              "title": "시설운영 안내",
+              "url": "/bhfacilities"
+            },
+            {
+              "title": "시청사 견학",
+              "url": "/bhvisit"
+            },
+            {
+              "title": "시청 전시실 대관",
+              "url": "/bhexhibition01",
+              "children": [
+                {
+                  "title": "시청 전시실 대관안내",
+                  "url": "/bhexhibition01"
+                },
+                {
+                  "title": "시청 전시실 사용자 준수사항",
+                  "url": "/bhexhibition02"
+                }
+              ]
+            },
+            {
+              "title": "공기업 · 출자 · 출연기관",
+              "url": "/bhinstitution"
+            }
+          ]
+        },
+        {
+          "title": "부산의 인물",
+          "url": "/bhloyalists",
+          "children": [
+            {
+              "title": "향토수호(충신)",
+              "url": "/bhloyalists"
+            },
+            {
+              "title": "독립운동가",
+              "url": "/bhindependenceactivist"
+            },
+            {
+              "title": "학자 및 교육자",
+              "url": "/bhscholar"
+            },
+            {
+              "title": "사회운동가",
+              "url": "/bhsocialactivist"
+            },
+            {
+              "title": "기업인",
+              "url": "/bhentrepreneur"
+            },
+            {
+              "title": "문화예술인",
+              "url": "/bhculturalartist"
+            },
+            {
+              "title": "부산광역시 문화상",
+              "url": "/bhculaward"
+            },
+            {
+              "title": "자랑스러운 시민상",
+              "url": "/bhcitaward"
+            },
+            {
+              "title": "부산광역시 명예시민",
+              "url": "/bhhonor"
+            }
+          ]
+        },
+        {
+          "title": "부산의 역사",
+          "url": "/bhnorigin01",
+          "children": [
+            {
+              "title": "명칭유래",
+              "url": "/bhnorigin01",
+              "children": [
+                {
+                  "title": "부산유래",
+                  "url": "/bhnorigin01"
+                },
+                {
+                  "title": "동명유래",
+                  "url": "/junggu"
+                }
+              ]
+            },
+            {
+              "title": "시대별 부산역사",
+              "url": "/prehistoric",
+              "children": [
+                {
+                  "title": "선사시대",
+                  "url": "/prehistoric"
+                },
+                {
+                  "title": "삼국시대",
+                  "url": "/threestate"
+                },
+                {
+                  "title": "고려시대",
+                  "url": "/goryeo"
+                },
+                {
+                  "title": "조선시대",
+                  "url": "/chosun"
+                },
+                {
+                  "title": "개항기",
+                  "url": "/historyopen"
+                },
+                {
+                  "title": "일제강점기",
+                  "url": "/historyoccu"
+                },
+                {
+                  "title": "광복이후부산시",
+                  "url": "/historyinde"
+                },
+                {
+                  "title": "부산직할시",
+                  "url": "/historydirec"
+                },
+                {
+                  "title": "부산광역시",
+                  "url": "/historymetro"
+                }
+              ]
+            },
+            {
+              "title": "국가유산",
+              "url": "/bhculpro"
+            },
+            {
+              "title": "부산의 주요 경승지",
+              "url": "/bhpplace04",
+              "children": [
+                {
+                  "title": "해운대",
+                  "url": "/bhpplace04"
+                },
+                {
+                  "title": "태종대",
+                  "url": "/bhpplace0401"
+                },
+                {
+                  "title": "신선대",
+                  "url": "/bhpplace0402"
+                },
+                {
+                  "title": "몰운대",
+                  "url": "/bhpplace0403"
+                },
+                {
+                  "title": "오륜대",
+                  "url": "/bhpplace0404"
+                },
+                {
+                  "title": "의상대",
+                  "url": "/bhpplace0405"
+                },
+                {
+                  "title": "겸효대",
+                  "url": "/bhpplace0406"
+                },
+                {
+                  "title": "강선대",
+                  "url": "/bhpplace0407"
+                },
+                {
+                  "title": "이기대",
+                  "url": "/bhpplace0408"
+                },
+                {
+                  "title": "시랑대",
+                  "url": "/bhpplace0409"
+                },
+                {
+                  "title": "삼성대",
+                  "url": "/bhpplace0410"
+                },
+                {
+                  "title": "황학대",
+                  "url": "/bhpplace0411"
+                },
+                {
+                  "title": "적선대",
+                  "url": "/bhpplace0413"
+                },
+                {
+                  "title": "용두대",
+                  "url": "/bhpplace0414"
+                },
+                {
+                  "title": "소학대",
+                  "url": "/bhpplace0415"
+                }
+              ]
+            },
+            {
+              "title": "시정역사",
+              "url": "/bhmohistory01",
+              "children": [
+                {
+                  "title": "도시개발",
+                  "url": "/bhmohistory01"
+                },
+                {
+                  "title": "도시교통",
+                  "url": "/bhmohistory02"
+                },
+                {
+                  "title": "상하수도",
+                  "url": "/bhmohistory03"
+                },
+                {
+                  "title": "금융 · 무역",
+                  "url": "/bhmohistory04"
+                },
+                {
+                  "title": "항만",
+                  "url": "/bhmohistory05"
+                },
+                {
+                  "title": "해운",
+                  "url": "/bhmohistory06"
+                },
+                {
+                  "title": "사회복지",
+                  "url": "/bhmohistory07"
+                },
+                {
+                  "title": "수산업",
+                  "url": "/bhmohistory08"
+                },
+                {
+                  "title": "문화예술 · 문화유산",
+                  "url": "/bhmohistory09"
+                },
+                {
+                  "title": "환경",
+                  "url": "/bhmohistory10"
+                },
+                {
+                  "title": "관광진흥",
+                  "url": "/bhmohistory11"
+                },
+                {
+                  "title": "체육",
+                  "url": "/bhmohistory12"
+                },
+                {
+                  "title": "교육",
+                  "url": "/bhmohistory13"
+                },
+                {
+                  "title": "미래산업",
+                  "url": "/bhmohistory14"
+                },
+                {
+                  "title": "상업",
+                  "url": "/bhmohistory15"
+                },
+                {
+                  "title": "농업",
+                  "url": "/bhmohistory16"
+                }
+              ]
+            },
+            {
+              "title": "역대시장",
+              "url": "/bhmayor"
+            },
+            {
+              "title": "연혁",
+              "url": "/bhhistory"
+            },
+            {
+              "title": "부산 지역사 도서관",
+              "url": "https://www.busandabom.net/index.nm?contentId=226&historyCd1=05"
+            },
+            {
+              "title": "부산역사문화대전",
+              "url": "http://busan.grandculture.net/?local=busan"
+            }
+          ]
+        },
+        {
+          "title": "부산통계",
+          "url": "https://data.busan.go.kr/bdip/statistics/bStat.do",
+          "children": [
+            {
+              "title": "통계로 보는 부산",
+              "url": "http://data.busan.go.kr/bdip/statistics/busan/dayIn.do"
+            },
+            {
+              "title": "시민공감지도",
+              "url": "http://data.busan.go.kr/bdip/statistics/csm/admGd.do"
+            },
+            {
+              "title": "통계소식",
+              "url": "http://data.busan.go.kr/bdip/board/statNews.do?bbs=STTMSTR_000000000361VyPBDUxQIX&searchCnd=0&searchWrd=&pageNum=1&clsf=undefined"
+            },
+            {
+              "title": "통계자료실",
+              "url": "http://data.busan.go.kr/bdip/board/statRpt.do?bbs=STTMSTR_000000000291wRAUdDfmAQ&searchCnd=0&searchWrd=&pageNum=1&clsf=undefined"
+            },
+            {
+              "title": "통계관련정보",
+              "url": "http://data.busan.go.kr/bdip/statistics/info/nationalityStts.do"
+            },
+            {
+              "title": "통계목록",
+              "url": "/statistics07"
+            }
+          ]
+        },
+        {
+          "title": "도시브랜드",
+          "url": "/ahprbrand",
+          "children": [
+            {
+              "title": "도시브랜드",
+              "url": "/ahprbrand",
+              "children": [
+                {
+                  "title": "도시브랜드 개념",
+                  "url": "/ahprbrand"
+                },
+                {
+                  "title": "도시브랜드위원회",
+                  "url": "/abprcomm"
+                },
+                {
+                  "title": "도시브랜드 3개년 기본계획",
+                  "url": "/abprthreeyear"
+                },
+                {
+                  "title": "도시브랜드 연차별 실행계획",
+                  "url": "/abprplan"
+                }
+              ]
+            },
+            {
+              "title": "도시브랜드 팝업전시품",
+              "url": "/brandpopup"
+            },
+            {
+              "title": "부산브랜드웹툰",
+              "url": "/brandwebtoon"
+            },
+            {
+              "title": "부산기네스125선",
+              "url": "/ab0104"
+            },
+            {
+              "title": "부산관광브랜드",
+              "url": "/brandBI"
+            }
+          ]
+        },
+        {
+          "title": "소통 캐릭터",
+          "url": "/character",
+          "children": [
+            {
+              "title": "소통 캐릭터 이용신청안내",
+              "url": "/character01"
+            },
+            {
+              "title": "부기튜브",
+              "url": "https://www.youtube.com/@boogi_in_busan"
+            },
+            {
+              "title": "소통 캐릭터 굿즈 쇼핑몰",
+              "url": "https://smartstore.naver.com/boogitown"
+            }
+          ]
+        },
+        {
+          "title": "주민자치회",
+          "url": "/jumin01",
+          "children": [
+            {
+              "title": "추진배경 및 방향",
+              "url": "/jumin01"
+            },
+            {
+              "title": "설치/운영 및 체계도",
+              "url": "/jumin02"
+            },
+            {
+              "title": "주민자치회 현황",
+              "url": "/jumin03"
+            },
+            {
+              "title": "주민자치회 소식",
+              "url": "/jumin04"
+            },
+            {
+              "title": "우수사례",
+              "url": "/jumin05"
+            },
+            {
+              "title": "활동사진첩",
+              "url": "/jumin06"
+            },
+            {
+              "title": "주민자치위원회 구성",
+              "url": "/jumin07"
+            },
+            {
+              "title": "회의록",
+              "url": "/jumin08"
+            },
+            {
+              "title": "주민자치위원회 활동",
+              "url": "/jumin09"
+            },
+            {
+              "title": "운영프로그램",
+              "url": "https://reserve.busan.go.kr/lctre/list.do?srchResveInsttCd=33"
+            }
+          ]
+        },
+        {
+          "title": "재미있는 부산",
+          "url": "https://www.busan.go.kr/estory",
+          "children": [
+            {
+              "title": "오감캠프장",
+              "url": "https://www.busan.go.kr/estory"
+            },
+            {
+              "title": "부산파크골프",
+              "url": "https://www.busan.go.kr/parkgolf"
+            }
+          ]
+        },
+        {
+          "title": "부산굿즈사업",
+          "url": "/merchandise10",
+          "children": [
+            {
+              "title": "부산 대표 관광기념품 10선",
+              "url": "/merchandise10"
+            },
+            {
+              "title": "개인정보 영향평가 수행현황 목록",
+              "url": "/vprivacy9"
+            },
+            {
+              "title": "개인정보 영향평가 요약본",
+              "url": "/vprivacy8"
+            },
+            {
+              "title": "개인정보 가명처리",
+              "url": "/privacyName"
+            },
+            {
+              "title": "개인정보 지킴이 서비스",
+              "url": "/privacyservice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5 ",
+      "title": "분야별정보",
+      "url": "/depart/index",
+      "children": [
+        {
+          "title": "경제",
+          "url": "/depart/index?num=1",
+          "svg": "Icon.lnbIco1"
+        },
+        {
+          "title": "일자리·교육",
+          "url": "/depart/index?num=2",
+          "svg": "Icon.lnbIco2"
+        },
+        {
+          "title": "사회복지",
+          "url": "/depart/index?num=3",
+          "svg": "Icon.lnbIco3"
+        },
+        {
+          "title": "여성·가족",
+          "url": "/depart/index?num=4",
+          "svg": "Icon.lnbIco4"
+        },
+        {
+          "title": "보건·건강",
+          "url": "/depart/index?num=5",
+          "svg": "Icon.lnbIco5"
+        },
+        {
+          "title": "도시·건축",
+          "url": "/depart/index?num=6",
+          "svg": "Icon.lnbIco6"
+        },
+        {
+          "title": "안전",
+          "url": "/depart/index?num=7",
+          "svg": "Icon.lnbIco7"
+        },
+        {
+          "title": "공원녹지·환경",
+          "url": "/depart/index?num=8",
+          "svg": "Icon.lnbIco8"
+        },
+        {
+          "title": "교통·물류",
+          "url": "/depart/index?num=9",
+          "svg": "Icon.lnbIco9"
+        },
+        {
+          "title": "해양농수산",
+          "url": "/depart/index?num=10",
+          "svg": "Icon.lnbIco10"
+        },
+        {
+          "title": "행정",
+          "url": "/depart/index?num=11",
+          "svg": "Icon.lnbIco11"
+        },
+        {
+          "title": "문화체육관광",
+          "url": "/depart/index?num=12",
+          "svg": "Icon.lnbIco12"
+        }
+      ]
+    }
+  ]
+}

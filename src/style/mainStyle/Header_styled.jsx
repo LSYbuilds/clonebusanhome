@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import busanLogo from "/src/assets/svg/busan_logo.svg";
 import logoSlogan from "/src/assets/svg/logo_slogan.svg";
+import { motion } from "framer-motion";
 
 /*
 반응형 분기점
@@ -23,6 +24,11 @@ import logoSlogan from "/src/assets/svg/logo_slogan.svg";
 const getLogo = (props) =>
   props.scrolled || props.hover ? busanLogo : logoSlogan;
 const bgChange = (props) => (props.scrolled || props.hover ? "#000" : "#fff");
+const tabletLogo = (props) =>
+  props.tabletCall || props.scrolled ? busanLogo : logoSlogan;
+const tabletScroll = (props) =>
+  props.tabletCall || props.scrolled ? "#000" : "#fff";
+
 export const HeaderWrap = styled.div`
   position: fixed;
   top: 0;
@@ -30,15 +36,28 @@ export const HeaderWrap = styled.div`
   width: 100%;
   z-index: 999;
   transition: all 0.2s ease-in-out;
-  background-color: ${(props) =>
-    props.scrolled || props.hover ? "#fff" : "none"};
   z-index: 12;
   .header_i {
+    position: relative;
     display: flex;
     margin: 0 auto;
     max-width: 1600px;
+    background-color: ${(props) =>
+      props.scrolled || props.hover ? "#fff" : "none"};
     width: 100%;
+    &::before {
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      width: 100vw;
+      height: 100%;
+      content: "";
+      background-color: ${(props) =>
+        props.scrolled || props.hover ? "#fff" : "none"};
+    }
     .logo_box {
+      position: relative;
       width: 170px;
       height: 110px;
       .logo {
@@ -108,6 +127,12 @@ export const HeaderWrap = styled.div`
             }
           }
         }
+        .tablet_search {
+          display: none;
+        }
+        .tablet_gnb_call {
+          display: none;
+        }
       }
       .gnb_bar {
         display: flex;
@@ -164,15 +189,21 @@ export const HeaderWrap = styled.div`
           justify-content: flex-end;
           align-items: center;
           .search {
+            position: relative;
             align-content: center;
             width: 30px;
             height: 100%;
             svg {
               width: 100%;
               height: 100%;
+              path {
+                stroke: ${(props) =>
+                  props.scrolled || props.hover ? "#000" : "#fff"};
+              }
             }
           }
           .site_map {
+            position: relative;
             width: 25px;
             height: 23px;
             display: flex;
@@ -183,7 +214,7 @@ export const HeaderWrap = styled.div`
               display: block;
               width: 100%;
               height: 2px;
-              background: ${(props) =>
+              background-color: ${(props) =>
                 props.scrolled || props.hover ? "#000" : "#fff"};
               &:nth-child(2) {
                 width: 80%;
@@ -230,6 +261,7 @@ export const HeaderWrap = styled.div`
               display: flex;
               justify-content: flex-start;
               width: 100%;
+              font-size: 18px;
               .icon {
                 position: relative;
                 display: inline-block;
@@ -265,18 +297,183 @@ export const HeaderWrap = styled.div`
     background-color: rgb(0, 0, 0, 0.7);
   }
   @media (max-width: 1620px) {
+    .header_i > .nav_wrap > .gnb_bar {
+      .gnb > .gnb_list > .gnb_item > a {
+        font-size: 18px;
+      }
+    }
+  }
+  @media (max-width: 1280px) {
     .header_i {
+      justify-content: space-between;
+      max-width: 100%;
+      width: 100%;
+      height: 60px;
+      padding: 0 3%;
+      background-color: ${(props) =>
+        props.tabletCall || props.scrolled ? "#fff" : "none"};
+      .logo_box {
+        width: auto;
+        height: 100%;
+        .logo {
+          justify-content: flex-start;
+          a {
+            width: 98px;
+            background-image: url(${(props) => tabletLogo(props)});
+          }
+        }
+      }
       .nav_wrap {
-        .gnb_bar {
-          .gnb {
-            .gnb_list {
-              .gnb_item {
-                a {
-                  font-size: 18px;
-                }
+        width: auto;
+        height: 100%;
+        .info_bar {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          gap: 10px;
+          width: auto;
+          height: 100%;
+          .nav_list > li > a {
+            color: ${(props) =>
+              props.tabletCall || props.scrolled ? "#000" : "#fff"};
+          }
+          .tablet_search {
+            display: block;
+            align-content: center;
+            height: 100%;
+            margin: 0px 10px;
+            svg {
+              width: 100%;
+              height: 50%;
+              path {
+                stroke: ${(props) =>
+                  props.tabletCall || props.scrolled ? "#000" : "#fff"};
               }
             }
           }
+          .tablet_gnb_call {
+            display: block;
+            align-content: center;
+            height: 100%;
+            font-size: 15px;
+            color: ${(props) =>
+              props.tabletCall || props.scrolled ? "#000" : "#fff"};
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .header_i > .nav_wrap > .gnb_bar {
+      display: none;
+    }
+  }
+`;
+
+export const TabletNav = styled(motion.div)`
+  display: none;
+  @media (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    background-color: aliceblue;
+    .tab_login_wrap {
+      display: flex;
+      width: 100%;
+      padding: 10px;
+      .login_inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 130px;
+        background-color: #0086ce;
+        padding-top: 35px;
+        padding-bottom: 15px;
+        border-radius: 15px;
+        .login_box {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          padding: 0px 2.5%;
+          /* 공통 */
+          div {
+            flex: 0 0 48%;
+            border-bottom: 2px solid #fff;
+            a {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              font-size: 15px;
+              font-family: "KohiLearn", "Noto Sans KR", sans-serif;
+              color: #fff;
+              span {
+              }
+            }
+          }
+        }
+        .site_helper {
+          display: flex;
+          justify-content: flex-end;
+          gap: 10px;
+          padding: 0 2.5%;
+          div {
+            a {
+              align-items: center;
+              display: flex;
+              font-size: 15px;
+              color: #fff;
+              svg {
+                width: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .tab_nav {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .gnb_box {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(241, 241, 241);
+        padding-top: 2%;
+        .gnb_list {
+          display: flex;
+          flex-direction: column;
+          li {
+            height: 50px;
+            align-content: center;
+            padding: 0px 2%;
+            color: rgb(34, 34, 34);
+            font-size: 15px;
+          }
+        }
+      }
+      .lnb_box {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 80%;
+        height: 100%;
+        background-color: #fff;
+        padding-top: 2%;
+        li {
+          display: flex;
+          justify-content: space-between;
+          height: 44px;
+          align-content: center;
+          align-items: center;
+          padding: 0px 10%;
+          color: rgb(34, 34, 34);
+          font-size: 15px;
+          border-bottom: 1px solid #ddd;
         }
       }
     }

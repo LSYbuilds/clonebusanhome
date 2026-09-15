@@ -28,8 +28,12 @@ import CommuIconYoutube from "../../assets/svg/icon/commnu_youtube.svg?react";
 import CommuIconYoutubeH from "../../assets/svg/icon/commnu_youtube_h.svg?react";
 import BannerIconB from "../../assets/svg/icon/ico_img.svg?react";
 import BannerIconW from "../../assets/svg/icon/ico_img_w.svg?react";
+import SiteMap from "../../assets/svg/icon/ico_sitemap_mo.svg?react";
+import Phone from "../../assets/svg/icon/ico_phone_mo.svg?react";
 
 const Icon = {
+  siteMap: SiteMap,
+  phone: Phone,
   logo: Logo,
   downallow: Down,
   search: Search,
