@@ -372,6 +372,8 @@ export const HeaderWrap = styled.div`
 export const TabletNav = styled(motion.div)`
   display: none;
   @media (max-width: 1280px) {
+    position: fixed;
+    right: 0px;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -448,7 +450,7 @@ export const TabletNav = styled(motion.div)`
           display: flex;
           flex-direction: column;
           li {
-            width: 140px;
+            width: 23%;
             height: 50px;
             align-content: center;
             padding: 0px 2%;
@@ -531,5 +533,9 @@ export const TabletNav = styled(motion.div)`
         }
       }
     }
+  }
+  @media (max-width: 1024px) {
+    right: 0px;
+    width: 80%;
   }
 `;

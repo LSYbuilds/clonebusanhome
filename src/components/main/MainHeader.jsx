@@ -252,7 +252,7 @@ const MainHeader = () => {
               className="tablet_gnb_call"
               onClick={() => setTabletCall((props) => !props)}
             >
-              메뉴
+              {tabletCall ? "닫기" : "메뉴"}
             </div>
           </div>
           <div className="gnb_bar">
@@ -345,9 +345,9 @@ const MainHeader = () => {
       <AnimatePresence>
         {tabletCall && (
           <TabletNav
-            initial={{ x: "+200%" }}
-            animate={{ x: "+100%" }}
-            exit={{ x: "+200%" }}
+            initial={{ right: "-100%" }}
+            animate={{ right: "0" }}
+            exit={{ right: "-100%" }}
             transition={{
               duration: 0.4,
               ease: "easeInOut",
