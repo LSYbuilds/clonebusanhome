@@ -11,6 +11,8 @@ const MainHeader = () => {
   const [lang, setLang] = useState(false);
   const [tabletCall, setTabletCall] = useState(false);
   const [tabletNav, setTabletNav] = useState(0);
+  const [childrenNav, setChildrenNav] = useState(0);
+  const [childrenToggle, setChildrenToggle] = useState(false);
   const busanMenuList = busanMenu.headermenus;
   console.log("마우스 상태확인", hover);
   useEffect(() => {
@@ -161,7 +163,12 @@ const MainHeader = () => {
     },
   ];
   return (
-    <HeaderWrap scrolled={scrolled} hover={hover} tabletCall={tabletCall}>
+    <HeaderWrap
+      scrolled={scrolled}
+      hover={hover}
+      tabletCall={tabletCall}
+      tabletNav={tabletNav}
+    >
       <div className="header_i">
         <div className="logo_box">
           <h1 className="logo">
@@ -299,7 +306,7 @@ const MainHeader = () => {
               <div className="lnb_list">
                 {busanMenuList.map((item) => (
                   <ul key={item.id} className="lnb_item">
-                    {item.children.map((iitem, idx) => {
+                    {item.list.map((iitem, idx) => {
                       const meatchedIcon = headersvg[idx]?.svg;
                       const SvgCompoent = meatchedIcon;
                       return (
@@ -381,8 +388,12 @@ const MainHeader = () => {
             <div className="tab_nav">
               <div className="gnb_box">
                 <ul className="gnb_list">
-                  {headerdata.map((item) => (
-                    <li key={item.id} onClick={() => setTabletNav(item.id)}>
+                  {busanMenuList.map((item, idx) => (
+                    <li
+                      key={item.id}
+                      onClick={() => setTabletNav(idx)}
+                      className={idx == tabletNav ? "gnb_list_click" : ""}
+                    >
                       {item.title}
                     </li>
                   ))}
@@ -390,12 +401,73 @@ const MainHeader = () => {
               </div>
               <div className="lnb_box">
                 <ul className="lnb_list">
-                  {headerdata[tabletNav].list.map((item, idx) => (
-                    <li key={idx}>
-                      {item.subtitle}
-                      <span>+</span>
-                    </li>
-                  ))}
+                  {busanMenuList[tabletNav].list.map((item, idx) => {
+                    const isOpen = childrenNav === idx && childrenToggle;
+                    return (
+                      <motion.li
+                        key={idx}
+                        leyout="size"
+                        transition={{
+                          layout: {
+                            duration: 0.3,
+                            ease: "easeInOut",
+                          },
+                        }}
+                      >
+                        <p className="list_title">
+                          {item.title}
+                          {item.children ? (
+                            <span
+                              onClick={() => {
+                                if (childrenNav === idx) {
+                                  setChildrenToggle((props) => !props);
+                                } else {
+                                  setChildrenNav(idx);
+                                  setChildrenToggle(true);
+                                }
+                              }}
+                              aria-expanded={isOpen}
+                            >
+                              {isOpen ? "-" : "+"}
+                            </span>
+                          ) : (
+                            ""
+                          )}
+                        </p>
+                        <AnimatePresence>
+                          {isOpen && (
+                            <motion.ul
+                              className="children_list"
+                              initial={{
+                                height: 0,
+                              }}
+                              animate={{
+                                height: "auto",
+                              }}
+                              exit={{
+                                height: 0,
+                              }}
+                              transition={{
+                                height: {
+                                  duration: 0.3,
+                                  ease: "easeInOut",
+                                },
+                              }}
+                              style={{
+                                overflow: "hidden",
+                              }}
+                            >
+                              {item.children.map((iitem, idx) => (
+                                <li key={idx}>
+                                  <Link to="#">{iitem.title}</Link>
+                                </li>
+                              ))}
+                            </motion.ul>
+                          )}
+                        </AnimatePresence>
+                      </motion.li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>

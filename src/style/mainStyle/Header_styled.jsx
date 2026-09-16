@@ -448,11 +448,24 @@ export const TabletNav = styled(motion.div)`
           display: flex;
           flex-direction: column;
           li {
+            width: 140px;
             height: 50px;
             align-content: center;
             padding: 0px 2%;
             color: rgb(34, 34, 34);
             font-size: 15px;
+            cursor: pointer;
+            transition-duration: 0.3s;
+          }
+          .gnb_list_click {
+            position: relative;
+            z-index: 1;
+            background-color: #0086ce;
+            color: #fff;
+            padding-left: 5%;
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            box-shadow: 1px 5px 11px rgba(0, 0, 0, 0.3);
           }
         }
       }
@@ -464,16 +477,57 @@ export const TabletNav = styled(motion.div)`
         height: 100%;
         background-color: #fff;
         padding-top: 2%;
+        padding-left: 5%;
+        overflow: scroll;
         li {
           display: flex;
-          justify-content: space-between;
-          height: 44px;
-          align-content: center;
-          align-items: center;
-          padding: 0px 10%;
-          color: rgb(34, 34, 34);
-          font-size: 15px;
+          flex-direction: column;
           border-bottom: 1px solid #ddd;
+          .list_title {
+            display: flex;
+            justify-content: space-between;
+            height: 44px;
+            align-content: center;
+            align-items: center;
+            color: rgb(34, 34, 34);
+            font-size: 15px;
+            cursor: pointer;
+            span {
+              cursor: pointer;
+            }
+            &:hover {
+              color: #0086ce;
+            }
+          }
+          .children_list {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f8f8;
+            li {
+              position: relative;
+              border: none;
+              a {
+                display: block;
+                padding: 6px 1.6em;
+                font-size: 15px;
+                &:hover {
+                  color: #0086ce;
+                }
+              }
+              &:before {
+                position: absolute;
+                top: 50%;
+                left: 3%;
+                transform: translate(-50%, 0%);
+                content: "";
+                background-color: #a3a3a3;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+              }
+            }
+          }
         }
       }
     }

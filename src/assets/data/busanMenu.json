@@ -4,7 +4,7 @@
       "id": "1",
       "title": "부산민원120",
       "url": "https://www.busan.go.kr/minwon/index",
-      "children": [
+      "list": [
         {
           "title": "민원신청",
           "url": "https://www.busan.go.kr/minwon/minwon02",
@@ -165,7 +165,7 @@
       "id": "2",
       "title": "부산소식",
       "url": "/nbnews",
-      "children": [
+      "list": [
         {
           "title": "새소식",
           "url": "/nbnews",
@@ -280,7 +280,7 @@
       "id": "3",
       "title": "정보공개",
       "url": "/govrnment",
-      "children": [
+      "list": [
         {
           "title": "주요시책",
           "url": "/gbplan",
@@ -977,7 +977,7 @@
       "id": "4",
       "title": "부산소개",
       "url": "/busanis",
-      "children": [
+      "list": [
         {
           "title": "부산의 오늘",
           "url": "/busanis",
@@ -1762,7 +1762,7 @@
       "id": "5 ",
       "title": "분야별정보",
       "url": "/depart/index",
-      "children": [
+      "list": [
         {
           "title": "경제",
           "url": "/depart/index?num=1",
