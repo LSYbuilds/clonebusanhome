@@ -83,6 +83,17 @@ export const MainWrap = styled.div`
       }
     }
   }
+  @media (max-width: 1620px) {
+    .inner {
+      width: 90%;
+    }
+  }
+  @media (max-width: 1620px) {
+  }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 1024px) {
+  }
 `;
 
 export const GuideSection = styled.section`
@@ -381,6 +392,25 @@ export const GuideSection = styled.section`
       margin: 0 auto;
       width: 1260px;
       height: 100%;
+    }
+  }
+  @media (max-width: 1620px) {
+    .gra_card_wrap {
+      flex-wrap: wrap;
+      .card_item {
+        flex: 0 0 49%;
+      }
+    }
+  }
+  @media (max-width: 1440px) {
+  }
+  @media (max-width: 1400px) {
+    .gra_card_wrap {
+      flex-wrap: wrap;
+      gap: 24px;
+      .card_item {
+        flex: 0 0 49%;
+      }
     }
   }
 `;

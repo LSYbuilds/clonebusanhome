@@ -367,10 +367,25 @@ export const HeaderWrap = styled.div`
       display: none;
     }
   }
+  @media (max-width: 1080px) {
+    .header_i > .nav_wrap > .info_bar {
+      .nav_list {
+        li {
+          display: none;
+        }
+        li {
+          &:nth-of-type(7) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const TabletNav = styled(motion.div)`
   display: none;
+  transition-duration: 0.3s;
   @media (max-width: 1280px) {
     position: fixed;
     right: 0px;
@@ -537,5 +552,8 @@ export const TabletNav = styled(motion.div)`
   @media (max-width: 1024px) {
     right: 0px;
     width: 80%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `;
