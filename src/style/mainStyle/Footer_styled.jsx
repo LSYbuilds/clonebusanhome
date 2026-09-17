@@ -19,7 +19,6 @@ export const FooterWrap = styled.div`
       .link_list {
         width: 318px;
         height: 100%;
-
         border-right: 1px solid rgb(34, 34, 34);
         li {
           position: relative;
@@ -224,6 +223,55 @@ export const FooterWrap = styled.div`
               margin-right: 2.5em;
               img {
                 vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    margin: 0 auto;
+    width: 90%;
+    .footer_top {
+      height: auto;
+      border: none;
+      .footer_top_i {
+        flex-direction: column;
+        .link_list {
+          width: 100%;
+          padding: 10px 0px;
+          border: 1px solid black;
+          li {
+            .list_head {
+              font-size: 1.5em;
+            }
+            .sub_list {
+              font-size: 1.5em;
+              bottom: calc(100% + 11px);
+            }
+          }
+          &:last-child {
+            border: 1px solid black;
+            border-top: none;
+          }
+        }
+      }
+    }
+    .footer_bottom {
+      .footer_bottom_i {
+        flex-direction: column;
+        .left_info {
+          width: 100%;
+          .f_left_menu {
+            flex-wrap: wrap;
+            justify-content: center;
+            li {
+              a {
+                font-size: 12.75px;
+              }
+              &::after {
+                height: 30%;
               }
             }
           }

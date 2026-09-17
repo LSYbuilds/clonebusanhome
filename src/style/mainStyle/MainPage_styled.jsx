@@ -57,8 +57,7 @@ export const MainWrap = styled.div`
       color: #585858;
     }
     .event_banner {
-      display: none;
-      /* display: flex; */
+      display: flex;
       justify-content: flex-start;
       align-content: stretch;
       width: 100%;
@@ -87,25 +86,55 @@ export const MainWrap = styled.div`
   @media (max-width: 1620px) {
     .inner {
       width: 90%;
+      .event_banner {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        li {
+          width: calc(100% / 4);
+          height: fit-content;
+          a {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
   }
   @media (max-width: 1280px) {
   }
   @media (max-width: 1024px) {
-    .inner section {
-      padding-bottom: 0px;
-      .head_title_box {
-        margin-bottom: 20px;
-        .head_title {
-          font-size: 2.1em;
+    .inner {
+      section {
+        padding-bottom: 0px;
+        .head_title_box {
+          margin-bottom: 20px;
+          .head_title {
+            font-size: 2.1em;
+          }
         }
+      }
+      .event_banner {
+        margin-top: 70px;
       }
     }
   }
   @media (max-width: 768px) {
-    .inner section {
-      .head_title_box .tag_list li a {
-        font-size: 1.2em;
+    .inner {
+      section {
+        .head_title_box .tag_list li a {
+          font-size: 1.2em;
+        }
+      }
+      .event_banner {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 2fr);
+        gap: 16px;
+        li {
+          width: 100%;
+        }
       }
     }
   }
@@ -860,6 +889,7 @@ export const BannerSection = styled.section`
 
   @media (max-width: 1600px) {
     .banner_link {
+      margin-top: 50px;
       a {
         padding: 10px 40px 10px 80px;
       }
