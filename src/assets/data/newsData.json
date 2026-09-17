@@ -1,0 +1,30 @@
+{
+  "scrap": [
+    {
+      "id": "1",
+      "title": "보도",
+      "subtitle": "자료",
+      "text": "부산시, 중국 베이징에서 마이스 시장 공략을 위한 로드쇼(유치설명회 개최",
+      "img": "https://www.busan.go.kr/imgBBSTY3/20260824/082407B5416864-ac2d52755d654d3291d4539f3a914d16.png"
+    },
+    {
+      "id": "2",
+      "title": "부산",
+      "subtitle": "시보",
+      "text": " 이 열차는 '행복행 열차' 입니다, 열차가 곧 출발합니다.",
+      "img": "https://www.busan.go.kr/imgARTICLE/20260814/081416B0419452-add551ce385f4a988eb1b1e71785e273.jpg"
+    },
+    {
+      "id": "3",
+      "title": "블로그",
+      "text": "부산보건환경연구원 연구과제 공모 | 시민의 일상 속 아이디어가 건강한 부산을 만듭니다",
+      "img": "https://www.busan.go.kr/snsimg/naver/224385526284.png"
+    },
+    {
+      "id": "4",
+      "title": "부산",
+      "subtitle": "튜브",
+      "img": "https://i.ytimg.com/vi/hy84z7NaWmU/sddefault.jpg"
+    }
+  ]
+}

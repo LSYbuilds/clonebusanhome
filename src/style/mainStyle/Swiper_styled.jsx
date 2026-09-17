@@ -1,5 +1,21 @@
 import styled from "@emotion/styled";
 import { Swiper } from "swiper/react";
+import { keyframes } from "@emotion/react";
+
+const AnimateBorder2 = keyframes`
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+`;
+
 export const StyledSwiper = styled(Swiper)`
   position: relative;
   width: 100%;
@@ -71,11 +87,12 @@ export const ServiceSwiper = styled(Swiper)`
       display: flex;
       flex-direction: column;
       cursor: pointer;
+      height: auto;
       gap: 20px;
       .icon {
         text-align: center;
         svg {
-          width: 50%;
+          width: 50px;
           height: 100%;
           transition: transform 1s ease-in-out;
         }
@@ -202,6 +219,176 @@ export const BannerSwiper = styled(Swiper)`
       width: calc(17 * 3px);
       border-radius: 100px;
       background-color: #1e4da4;
+    }
+  }
+  @media (max-width: 1024px) {
+    .swiper-wrapper {
+      .swiper-slide {
+        width: auto;
+        img {
+          position: static;
+          transform: none;
+          display: block;
+          height: 100%;
+          border-radius: 20px;
+          border: 2px solid rgb(136, 136, 136, 0.3);
+          transition-duration: 1s;
+        }
+      }
+      .swiper-slide:not(.swiper-slide-active) {
+        position: relative;
+        img {
+          border-radius: 20px;
+          height: 100%;
+        }
+      }
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: #ccc;
+      }
+      .swiper-pagination-bullet-active {
+        width: calc(8 * 3px);
+        border-radius: 100px;
+        background-color: #1e4da4;
+      }
+    }
+    .swiper-button-prev {
+      display: none;
+    }
+    .swiper-button-next {
+      display: none;
+    }
+  }
+`;
+
+export const MobileScrapSwiper = styled(Swiper)`
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .swiper-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    width: auto;
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 1280px) {
+    display: block;
+    .swiper-wrapper {
+      padding: 10px 0px;
+      .swiper-slide {
+        position: relative;
+        width: 314px;
+        height: 400px;
+        .news_item {
+          width: 100%;
+          height: 100%;
+          box-shadow: 15px 15px 50px 1px rgba(51, 51, 51, 0);
+          .news_inset {
+            width: 100%;
+            position: relative;
+            height: 100%;
+            .news_inset_bg {
+              position: absolute;
+              z-index: 9;
+              top: 50%;
+              left: 50%;
+              opacity: 0;
+              transition-duration: 0.3s;
+              transform: translate(-50%, -50%);
+              width: calc(100% + 10px);
+              height: calc(100% + 10px);
+              border-radius: 40px;
+              overflow: hidden;
+              background-color: red;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 300%;
+                height: 300%;
+                background-image: linear-gradient(
+                  45deg,
+                  #e50048 0%,
+                  #ff6596 47%,
+                  #6fd2c3 58%,
+                  #4eb4a4 67%,
+                  #00967f 100%
+                );
+                opacity: 1;
+                transition: opacity 0.3s ease-in-out;
+              }
+            }
+            .news_in {
+              position: absolute;
+              z-index: 10;
+              top: 0px;
+              left: 0px;
+              width: 100%;
+              height: 100%;
+              background-color: #fff;
+              display: flex;
+              flex-direction: column;
+              cursor: pointer;
+              border-radius: 35px;
+              overflow: hidden;
+              .item_info {
+                display: flex;
+                flex-direction: column;
+                padding: 35px;
+                .info_title {
+                  display: flex;
+                  flex-direction: column;
+                  color: #585858;
+                  line-height: 28px;
+                  font-size: 25px;
+                  font-family: "KohiLearn", "Noto Sans KR", sans-serif;
+                  margin-bottom: 10px;
+                }
+                .info_text {
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  font-size: 1.4em;
+                }
+              }
+              .news_img {
+                height: 100%;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  object-position: center;
+                }
+              }
+            }
+          }
+        }
+        &:hover {
+          .news_item .news_inset > .news_inset_bg {
+            opacity: 1;
+            &::after {
+              animation: ${AnimateBorder2} 3s ease infinite;
+            }
+          }
+        }
+      }
     }
   }
 `;

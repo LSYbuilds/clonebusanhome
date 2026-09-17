@@ -13,6 +13,7 @@ import {
   ServiceSwiper,
   NoticeSwiper,
   BannerSwiper,
+  MobileScrapSwiper,
 } from "../../style/mainStyle/Swiper_styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
@@ -29,10 +30,12 @@ import {
 } from "swiper/modules";
 import Icon from "../../components/common/SvgComponents";
 import noticeData from "../../assets/data/notice.json";
+import newsData from "../../assets/data/newsData.json";
 import { img, p } from "framer-motion/client";
 const MainPage = () => {
   const [hoveredId, setHoveredId] = useState(null);
   const controls = useAnimation();
+  const newsScrap = newsData.scrap;
   const handleViewPortEnter = () => {
     controls.start({
       opacity: 1,
@@ -354,6 +357,9 @@ const MainPage = () => {
                     <div className="text">
                       <p>간편하게 예약하세요</p>
                       <p>강좌/교육,견학/체험,대관/대여</p>
+                      <p className="m_text">
+                        간편하게 예약하세요 강좌/교육,견학/체험,대관/대여
+                      </p>
                     </div>
                   </div>
                   <div className="icon_box">
@@ -461,7 +467,23 @@ const MainPage = () => {
           <div className="service_slide">
             {/* 이거 1260px */}
             <div className="service_in">
-              <ServiceSwiper slidesPerView={12}>
+              <ServiceSwiper
+                slidesPerView={3}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 3,
+                  },
+                  480: {
+                    slidesPerView: 3,
+                  },
+                  768: {
+                    slidesPerView: 7,
+                  },
+                  1024: {
+                    slidesPerView: 12,
+                  },
+                }}
+              >
                 {IconSet.map((item) => {
                   const SvgIcon = item.svg;
                   return (
@@ -495,9 +517,26 @@ const MainPage = () => {
                 ease: "easeOut",
               }}
             >
-              <NoticeSwiper slidesPerView={3} spaceBetween={50}>
+              <NoticeSwiper
+                slidesPerView={1}
+                spaceBetween={20}
+                breakpoints={{
+                  480: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
                 {NoticeData.map((item) => (
-                  <SwiperSlide key={item.id}>
+                  <SwiperSlide>
                     <p className="notice_title">{item.title}</p>
                     <p className="notice_text">{item.text}</p>
                     <p className="notice_date">{item.date}</p>
@@ -577,97 +616,75 @@ const MainPage = () => {
               }}
             >
               <div className="news_list">
-                <div className="news_item">
-                  <div className="news_inset">
-                    <div className="news_inset_bg"></div>
-                    <Link to="#" className="news_in">
-                      <div className="item_info">
-                        <p className="info_title">
-                          <span>보도</span>
-                          <span>자료</span>
-                        </p>
-                        <p className="info_text">
-                          부산시, 중국 베이징에서 마이스 시장 공략을 위한
-                          "로드쇼(유치설명회" 개최
-                        </p>
-                      </div>
-                      <div className="news_img">
-                        <img
-                          src="https://www.busan.go.kr/imgBBSTY3/20260824/082407B5416864-ac2d52755d654d3291d4539f3a914d16.png"
-                          alt="카드이미지"
-                        />
-                      </div>
-                    </Link>
+                {newsScrap.map((item) => (
+                  <div className="news_item">
+                    <div className="news_inset">
+                      <div className="news_inset_bg"></div>
+                      <Link to="#" className="news_in">
+                        <div className="item_info">
+                          <p className="info_title">
+                            <span>{item.title}</span>
+                            {item.subtitle ? <span>{item.subtitle}</span> : ""}
+                          </p>
+                          <p className="info_text">{item.text}</p>
+                        </div>
+                        <div className="news_img">
+                          <img src={item.img} alt="카드이미지" />
+                        </div>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-                <div className="news_item">
-                  <div className="news_inset">
-                    <div className="news_inset_bg"></div>
-                    <Link to="#" className="news_in">
-                      <div className="item_info">
-                        <p className="info_title">
-                          <span>부산</span>
-                          <span>시보</span>
-                        </p>
-                        <p className="info_text">
-                          이 열차는 '행복행 열차' 입니다, 열차가 곧 출발합니다.
-                        </p>
-                      </div>
-                      <div className="news_img">
-                        <img
-                          src="https://www.busan.go.kr/imgARTICLE/20260814/081416B0419452-add551ce385f4a988eb1b1e71785e273.jpg"
-                          alt="카드이미지"
-                        />
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-                <div className="news_item">
-                  <div className="news_inset">
-                    <div className="news_inset_bg"></div>
-                    <Link to="#" className="news_in">
-                      <div className="item_info">
-                        <p className="info_title">
-                          <span>블로그</span>
-                        </p>
-                        <p className="info_text">
-                          부산보건환경연구원 연구과제 공모 | 시민의 일상 속
-                          아이디어가 건강한 부산을 만듭니다
-                        </p>
-                      </div>
-                      <div className="news_img">
-                        <img
-                          src="https://www.busan.go.kr/snsimg/naver/224385526284.png"
-                          alt="카드이미지"
-                        />
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-                <div className="news_item">
-                  <div className="news_inset">
-                    <div className="news_inset_bg"></div>
-                    <Link to="#" className="news_in">
-                      <div className="item_info">
-                        <p className="info_title">
-                          <span>부산튜브</span>
-                        </p>
-                        <p className="info_text">
-                          부산시, 중국 베이징에서 마이스 시장 공략을 위한
-                          "로드쇼(유치설명회" 개최
-                        </p>
-                      </div>
-                      <div className="news_img">
-                        <img
-                          src="https://i.ytimg.com/vi/hy84z7NaWmU/sddefault.jpg"
-                          alt="카드이미지"
-                        ></img>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
+                ))}
               </div>
             </motion.div>
+            <div className="mobile_scrap_swiper_wrap">
+              <MobileScrapSwiper
+                slidesPerView={1}
+                breakpoints={{
+                  10: {
+                    slidesPerView: 1,
+                  },
+                  600: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                  },
+                  900: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                }}
+              >
+                {newsScrap.map((item) => (
+                  <SwiperSlide key={item.id}>
+                    <div className="news_item">
+                      <div className="news_inset">
+                        <div className="news_inset_bg"></div>
+                        <Link to="#" className="news_in">
+                          <div className="item_info">
+                            <p className="info_title">
+                              <span>{item.title}</span>
+                              {item.subtitle ? (
+                                <span>{item.subtitle}</span>
+                              ) : (
+                                ""
+                              )}
+                            </p>
+                            <p className="info_text">{item.text}</p>
+                          </div>
+                          <div className="news_img">
+                            <img src={item.img} alt="카드이미지" />
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </MobileScrapSwiper>
+            </div>
           </div>
         </CommuSection>
         {/* 배너영역 */}
@@ -677,14 +694,13 @@ const MainPage = () => {
           </div>
           <div className="banner_slide_area">
             <BannerSwiper
-              modules={[EffectCoverflow, Pagination, Navigation]}
+              modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
               effect={"coverflow"}
               grabCursor={true}
-              centeredSlides={true}
+              spaceBetween={10}
               slidesPerView={"auto"}
-              spaceBetween={"-30%"}
-              autoplay={true}
-              loop
+              loop={true}
+              speed={1000}
               coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
@@ -694,7 +710,32 @@ const MainPage = () => {
               }}
               pagination={{ clickable: true }}
               navigation={true}
-              speed={1000}
+              breakpoints={{
+                0: {
+                  centeredSlides: true,
+                  slidesPerView: "auto",
+                  spaceBetween: 10,
+                  coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 0,
+                    modifier: 0,
+                    slideShadows: false,
+                  },
+                },
+                1024: {
+                  centeredSlides: true,
+                  slidesPerView: 3,
+                  spaceBetween: "-30%",
+                  coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2.5,
+                    slideShadows: false,
+                  },
+                },
+              }}
             >
               {bannerSlide.map((item) => (
                 <SwiperSlide key={item.id}>
