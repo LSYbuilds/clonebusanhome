@@ -121,6 +121,7 @@ export const FooterWrap = styled.div`
             .address_box {
               display: flex;
               flex-direction: column;
+              font-size: 1.6em;
               .way_list {
                 display: flex;
                 justify-content: space-between;
@@ -131,12 +132,16 @@ export const FooterWrap = styled.div`
               }
             }
           }
+          .copy_right {
+            font-size: 1.6em;
+          }
         }
       }
       .right_info {
         .f_sns_list {
           display: flex;
           align-items: center;
+          gap: 10px;
         }
 
         .f_sns_list li a {
@@ -146,40 +151,40 @@ export const FooterWrap = styled.div`
           &::before {
             content: "";
             display: block;
-            width: 2.5em;
-            height: 2.5em;
-            background: url("/img/ico_sns.png") no-repeat;
-            background-size: auto 100%;
+            width: 100%;
+            height: 100%;
+            gap: 20px;
+            background-repeat: no-repeat;
+            background-size: auto 80%;
           }
         }
         .f_sns_list li {
           .mail::before {
-            background-position: 0 center;
           }
           .twitter::before {
-            background-position: -2.5em center;
+            background-image: url("/img/f_sns/twitterX.png");
           }
           .facebook::before {
-            background-position: -5em center;
+            background-image: url("/img/f_sns/facebook.png");
           }
           .naverblog::before {
-            background-position: -7.5em center;
+            background-image: url("/img/f_sns/naverBlog.png");
           }
           .kakaostory::before {
-            background-position: -10em center;
+            background-image: url("/img/f_sns/KakaoStory.png");
           }
           .youtube::before {
-            background-position: -12.5em center;
+            background-image: url("/img/f_sns/youtube.png");
           }
           .badatv {
-            width: 90px;
+            width: 60px;
           }
           .badatv::before {
             width: 90px;
-            background-position: -20em center;
+            background-image: url("/img/f_sns/befm.png");
           }
           .insta::before {
-            background-position: -17.5em center;
+            background-image: url("/img/f_sns/instar.png");
           }
         }
         .site_call {
@@ -297,7 +302,41 @@ export const FooterWrap = styled.div`
           }
         }
         .right_info {
+          margin: 20px 0px;
           .f_sns_list {
+            justify-content: center;
+          }
+          .f_sns_list li a {
+            display: block;
+            width: 2.5em;
+            height: 2.5em;
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              gap: 20px;
+              background-repeat: no-repeat;
+              background-size: auto 80%;
+            }
+          }
+          .site_call {
+            align-items: center;
+            .call_number {
+              p {
+                &:nth-of-type(1) {
+                  span {
+                    font-size: 1.3em;
+                  }
+                }
+                &:nth-of-type(2) {
+                  font-size: 3em;
+                }
+              }
+            }
+          }
+          .flag {
+            margin: 20px 0;
             justify-content: center;
           }
         }

@@ -342,7 +342,22 @@ const MainHeader = () => {
           ></motion.div>
         )}
       </AnimatePresence>
+      {/* 모바일 사이드 헤더 */}
       <AnimatePresence>
+        {tabletCall && (
+          <motion.div
+            className="tablet_call_bg"
+            initial={{ opacity: "0" }}
+            animate={{ opacity: "1" }}
+            exit={{ opacity: "0" }}
+            transition={{
+              duration: 0.4,
+            }}
+            onClick={() => {
+              setTabletCall((props) => !props);
+            }}
+          ></motion.div>
+        )}
         {tabletCall && (
           <TabletNav
             initial={{ right: "-100%" }}
@@ -350,7 +365,6 @@ const MainHeader = () => {
             exit={{ right: "-100%" }}
             transition={{
               duration: 0.4,
-              ease: "easeInOut",
             }}
           >
             <div className="tab_login_wrap">

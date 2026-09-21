@@ -291,10 +291,13 @@ export const HeaderWrap = styled.div`
     position: absolute;
     width: 100vw;
     height: 100vh;
-    z-index: 990;
+    z-index: 800;
     top: 100%;
     left: 0px;
     background-color: rgb(0, 0, 0, 0.7);
+  }
+  .tablet_call_bg {
+    display: none;
   }
   @media (max-width: 1620px) {
     .header_i > .nav_wrap > .gnb_bar {
@@ -366,6 +369,16 @@ export const HeaderWrap = styled.div`
     .header_i > .nav_wrap > .gnb_bar {
       display: none;
     }
+    .tablet_call_bg {
+      display: block;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: 800;
+      top: 100%;
+      left: 0px;
+      background-color: rgb(0, 0, 0, 0.7);
+    }
   }
   @media (max-width: 1080px) {
     .header_i > .nav_wrap > .info_bar {
@@ -388,6 +401,7 @@ export const TabletNav = styled(motion.div)`
   transition-duration: 0.3s;
   @media (max-width: 1280px) {
     position: fixed;
+    z-index: 900;
     right: 0px;
     display: flex;
     flex-direction: column;
