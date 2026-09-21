@@ -34,6 +34,9 @@ import newsData from "../../assets/data/newsData.json";
 import { img, p } from "framer-motion/client";
 const MainPage = () => {
   const [hoveredId, setHoveredId] = useState(null);
+  // 중요 //
+  const publicPath = (path) =>
+    `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   const controls = useAnimation();
   const newsScrap = newsData.scrap;
   const handleViewPortEnter = () => {
@@ -291,12 +294,12 @@ const MainPage = () => {
               {item.id === "6" ? (
                 <div className="video">
                   <video preload="auto" muted playsInline autoPlay>
-                    <source src={item.src} type="video/mp4" />
+                    <source src={publicPath(item.src)} type="video/mp4" />
                   </video>
                 </div>
               ) : (
                 <div className="imgbox">
-                  <img src={item.src} alt={item.alt} />
+                  <img src={publicPath(item.src)} alt={item.alt} />
                   <div className="img_info">{item.title}</div>
                 </div>
               )}
@@ -593,7 +596,7 @@ const MainPage = () => {
                           <SvgIcon />
                         </span>
                       ) : imgSrc ? (
-                        <img src={imgSrc} alt="이미지" />
+                        <img src={publicPath(imgSrc)} alt="이미지" />
                       ) : item.text === " 의 공연&전시+" ? (
                         <p className="today">오늘</p>
                       ) : (
@@ -676,7 +679,7 @@ const MainPage = () => {
                             <p className="info_text">{item.text}</p>
                           </div>
                           <div className="news_img">
-                            <img src={item.img} alt="카드이미지" />
+                            <img src={publicPath(item.img)} alt="카드이미지" />
                           </div>
                         </Link>
                       </div>
@@ -739,7 +742,7 @@ const MainPage = () => {
             >
               {bannerSlide.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <img src={item.src} alt="배너 슬라이드" />
+                  <img src={publicPath(item.src)} alt="배너 슬라이드" />
                 </SwiperSlide>
               ))}
             </BannerSwiper>
@@ -751,22 +754,34 @@ const MainPage = () => {
         <ul className="event_banner">
           <li>
             <Link>
-              <img src="/img/event/getImage1.jpg" alt="이벤트배너" />
+              <img
+                src={publicPath("/img/event/getImage1.jpg")}
+                alt="이벤트배너"
+              />
             </Link>
           </li>
           <li>
             <Link>
-              <img src="/img/event/getImage2.jpg" alt="이벤트배너" />
+              <img
+                src={publicPath("/img/event/getImage2.jpg")}
+                alt="이벤트배너"
+              />
             </Link>
           </li>
           <li>
             <Link>
-              <img src="/img/event/getImage3.jpg" alt="이벤트배너" />
+              <img
+                src={publicPath("/img/event/getImage3.jpg")}
+                alt="이벤트배너"
+              />
             </Link>
           </li>
           <li>
             <Link>
-              <img src="/img/event/getImage4.jpg" alt="이벤트배너" />
+              <img
+                src={publicPath("/img/event/getImage4.jpg")}
+                alt="이벤트배너"
+              />
             </Link>
           </li>
         </ul>

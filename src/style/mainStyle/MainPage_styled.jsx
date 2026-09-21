@@ -3,6 +3,9 @@ import { keyframes } from "@emotion/react";
 import bannerIcon from "/src/assets/svg/icon/ico_img.svg";
 import bannerIconW from "/src/assets/svg/icon/ico_img_w.svg";
 
+const publicPath = (path) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 const AnimateBorder2 = keyframes`
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -270,7 +273,7 @@ export const GuideSection = styled.section`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-image: url("img/ico_cult.png");
+        background-image: url(${publicPath("img/ico_cult.png")});
         background-repeat: no-repeat;
         background-position: right 36px top 30px;
         background-size: auto;
@@ -298,7 +301,7 @@ export const GuideSection = styled.section`
         position: relative;
         display: flex;
         justify-content: space-between;
-        background-image: url("/img/tour_thum.jpg");
+        background-image: url(${publicPath("/img/tour_thum.jpg")});
         background-repeat: no-repeat;
         background-size: cover;
         .card_title_box {
@@ -337,16 +340,16 @@ export const GuideSection = styled.section`
               height: 100%;
             }
             &:first-child {
-              background-image: url("/img/ico_main_tour01.png");
+              background-image: url(${publicPath("/img/ico_main_tour01.png")});
             }
             &:nth-child(2) {
-              background-image: url("/img/ico_visitbusan.png");
+              background-image: url(${publicPath("/img/ico_visitbusan.png")});
             }
             &:nth-child(3) {
-              background-image: url("/img/ico_galmaet.png");
+              background-image: url(${publicPath("/img/ico_galmaet.png")});
             }
             &:nth-child(4) {
-              background-image: url("/img/ico_medicalbusan.png");
+              background-image: url(${publicPath("/img/ico_medicalbusan.png")});
             }
           }
         }
@@ -358,7 +361,7 @@ export const GuideSection = styled.section`
         background-color: #033d99;
 
         background-image:
-          url("/img/sijang_new3.png"),
+          url(${publicPath("/img/sijang_new3.png")}),
           linear-gradient(to right, #033d99, #0190cf);
 
         background-position:
@@ -881,7 +884,7 @@ export const BannerSection = styled.section`
         transform: translate(-0%, -50%);
         width: 42px;
         height: 26px;
-        background-image: url(/img/ico_img.svg);
+        background-image: url(${publicPath("/img/ico_img.svg")});
         background-repeat: no-repeat;
       }
     }
