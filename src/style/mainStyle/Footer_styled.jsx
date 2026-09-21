@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
 import busanLogo from "/src/assets/svg/busan_logo.svg";
 
+const publicPath = (path) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 export const FooterWrap = styled.div`
   width: 100%;
   padding-bottom: 100px;
@@ -162,29 +165,29 @@ export const FooterWrap = styled.div`
           .mail::before {
           }
           .twitter::before {
-            background-image: url("/img/f_sns/twitterX.png");
+            background-image: url(${publicPath("/img/f_sns/twitterX.png")});
           }
           .facebook::before {
-            background-image: url("/img/f_sns/facebook.png");
+            background-image: url(${publicPath("/img/f_sns/facebook.png")});
           }
           .naverblog::before {
-            background-image: url("/img/f_sns/naverBlog.png");
+            background-image: url(${publicPath("/img/f_sns/naverBlog.png")});
           }
           .kakaostory::before {
-            background-image: url("/img/f_sns/KakaoStory.png");
+            background-image: url(${publicPath("/img/f_sns/KakaoStory.png")});
           }
           .youtube::before {
-            background-image: url("/img/f_sns/youtube.png");
+            background-image: url(${publicPath("/img/f_sns/youtube.png")});
           }
           .badatv {
             width: 60px;
           }
           .badatv::before {
             width: 90px;
-            background-image: url("/img/f_sns/befm.png");
+            background-image: url(${publicPath("/img/f_sns/befm.png")});
           }
           .insta::before {
-            background-image: url("/img/f_sns/instar.png");
+            background-image: url(${publicPath("/img/f_sns/instar.png")});
           }
         }
         .site_call {
