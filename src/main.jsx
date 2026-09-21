@@ -9,7 +9,7 @@ const basename = import.meta.env.DEV ? "" : "/clonebusanhome";
 // 일단 이거 페이지부터  따고!
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename={baasename}>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </StrictMode>,
