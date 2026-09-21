@@ -5,6 +5,8 @@ import Icon from "../common/SvgComponents";
 import busanLogo from "../../assets/svg/busan_logo.svg";
 
 const MainFooter = () => {
+  const publicPath = (path) =>
+    `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   const [tabOne, setTabOne] = useState(false);
   const [tabTwo, setTabTwo] = useState(false);
   const snsList = [
@@ -221,7 +223,10 @@ const MainFooter = () => {
               <div className="footer_address">
                 <div className="footer_logo">
                   <Link to="#">
-                    <img src="/img/busan_logo.svg" alt="" />
+                    <img
+                      src={publicPath("/img/busan_logo.svg")}
+                      alt="푸터로고"
+                    />
                   </Link>
                 </div>
                 <div className="address_box">
@@ -268,10 +273,10 @@ const MainFooter = () => {
             </div>
             <div className="flag">
               <Link>
-                <img src="/img/ft_symbol.png" alt="하단 이미지" />
+                <img src={publicPath("/img/ft_symbol.png")} alt="하단 이미지" />
               </Link>
               <Link>
-                <img src="/img/footer_wa.png" alt="하단 이미지" />
+                <img src={publicPath("/img/footer_wa.png")} alt="하단 이미지" />
               </Link>
             </div>
           </div>
