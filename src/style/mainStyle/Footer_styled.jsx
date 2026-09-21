@@ -267,13 +267,38 @@ export const FooterWrap = styled.div`
             flex-wrap: wrap;
             justify-content: center;
             li {
+              padding: 0px 5px;
               a {
                 font-size: 12.75px;
               }
               &::after {
                 height: 30%;
               }
+              &:nth-of-type(3) {
+                a {
+                  font-size: 20px;
+                  color: rgb(15, 108, 161);
+                }
+              }
             }
+          }
+          .f_logo_way {
+            .footer_address {
+              flex-direction: column;
+              align-items: center;
+              .address_box {
+                font-size: 12.75px;
+              }
+            }
+            .copy_right {
+              text-align: center;
+              font-size: 12.75px;
+            }
+          }
+        }
+        .right_info {
+          .f_sns_list {
+            justify-content: center;
           }
         }
       }

@@ -241,7 +241,9 @@ const MainFooter = () => {
                   </ul>
                 </div>
               </div>
-              <p>Copyright © Busan Metropolitan City. All rights reserved.</p>
+              <p className="copy_right">
+                Copyright © Busan Metropolitan City. All rights reserved.
+              </p>
             </div>
           </div>
           <div className="right_info">
