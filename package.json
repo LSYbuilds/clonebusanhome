@@ -2,7 +2,7 @@
   "name": "clonebusan",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/LSYbuilds/clonebusanhome",
+  "homepage": "https://lsybuilds.github.io/clonebusanhome/",
   "type": "module",
   "scripts": {
     "dev": "vite",
