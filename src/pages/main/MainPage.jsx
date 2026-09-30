@@ -679,7 +679,7 @@ const MainPage = () => {
                             <p className="info_text">{item.text}</p>
                           </div>
                           <div className="news_img">
-                            <img src={publicPath(item.img)} alt="카드이미지" />
+                            <img src={item.img} alt="카드이미지" />
                           </div>
                         </Link>
                       </div>
